@@ -9,7 +9,7 @@
       <Value Profile="(Default)">sectionToolStripMenuItemSection</Value>
     </Setting>
     <Setting Name="user_path" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">k:\users</Value>
     </Setting>
     <Setting Name="LessonDatabase" Type="System.String" Scope="User">
       <Value Profile="(Default)">JimKay</Value>
@@ -18,7 +18,7 @@
       <Value Profile="(Default)">97GeneralHospital</Value>
     </Setting>
     <Setting Name="ChineseStudyServer" Type="System.String" Scope="User">
-      <Value Profile="(Default)">EC2AMAZ-P0FQ3QL</Value>
+      <Value Profile="(Default)">ACER0</Value>
     </Setting>
     <Setting Name="user_section" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -50,13 +50,13 @@
       <Value Profile="(Default)">ChineseStudy</Value>
     </Setting>
     <Setting Name="LessonDatabaseServer" Type="System.String" Scope="User">
-      <Value Profile="(Default)">EC2AMAZ-P0FQ3QL</Value>
+      <Value Profile="(Default)">ACER0</Value>
     </Setting>
     <Setting Name="LessonPassword" Type="System.String" Scope="User">
-      <Value Profile="(Default)">42Ergotamine!</Value>
+      <Value Profile="(Default)">97GeneralHospital</Value>
     </Setting>
     <Setting Name="LessonDatabaseUserID" Type="System.String" Scope="User">
-      <Value Profile="(Default)">JimKay</Value>
+      <Value Profile="(Default)">sa</Value>
     </Setting>
     <Setting Name="ChineseStudyConnection" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -64,10 +64,10 @@
     <Setting Name="JimKayConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=ec2amaz-p0fq3ql;Initial Catalog=JimKay;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=ACER0;Initial Catalog=JimKay;Integrated Security=True&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=ec2amaz-p0fq3ql;Initial Catalog=JimKay;Integrated Security=True</Value>
+      <Value Profile="(Default)">Data Source=ACER0;Initial Catalog=JimKay;Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

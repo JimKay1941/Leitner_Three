@@ -49,7 +49,7 @@ namespace Leitner_Three.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("k:\\users")]
         public string user_path {
             get {
                 return ((string)(this["user_path"]));
@@ -85,7 +85,7 @@ namespace Leitner_Three.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("EC2AMAZ-P0FQ3QL")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ACER0")]
         public string ChineseStudyServer {
             get {
                 return ((string)(this["ChineseStudyServer"]));
@@ -190,7 +190,7 @@ namespace Leitner_Three.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("EC2AMAZ-P0FQ3QL")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ACER0")]
         public string LessonDatabaseServer {
             get {
                 return ((string)(this["LessonDatabaseServer"]));
@@ -202,7 +202,7 @@ namespace Leitner_Three.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("42Ergotamine!")]
+        [global::System.Configuration.DefaultSettingValueAttribute("97GeneralHospital")]
         public string LessonPassword {
             get {
                 return ((string)(this["LessonPassword"]));
@@ -214,7 +214,7 @@ namespace Leitner_Three.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("JimKay")]
+        [global::System.Configuration.DefaultSettingValueAttribute("sa")]
         public string LessonDatabaseUserID {
             get {
                 return ((string)(this["LessonDatabaseUserID"]));
@@ -239,7 +239,7 @@ namespace Leitner_Three.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ec2amaz-p0fq3ql;Initial Catalog=JimKay;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ACER0;Initial Catalog=JimKay;Integrated Security=True")]
         public string JimKayConnectionString {
             get {
                 return ((string)(this["JimKayConnectionString"]));
