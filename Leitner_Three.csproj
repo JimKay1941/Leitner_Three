@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9DD76A58-1C07-42DA-89AF-01F85184D379}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Leitner_Three</RootNamespace>
+    <AssemblyName>Leitner_Three</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <SignManifests>true</SignManifests>
+    <ManifestCertificateThumbprint>9B9E451BABF7851F9461320655786E9B60569EB6</ManifestCertificateThumbprint>
+    <SignAssembly>false</SignAssembly>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <StartupObject>Leitner_Three.Program</StartupObject>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>ftp://030e9e9.netsolhost.com/htdocs/leitner/distribution/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.leitnerweb.org/Leitner/Distribution/</InstallUrl>
+    <SupportUrl>http://www.Leitnerweb.org</SupportUrl>
+    <ProductName>Leitner Two</ProductName>
+    <PublisherName>James S Kay, Consulting</PublisherName>
+    <MinimumRequiredVersion>2.0.1.0</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>2.2.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Leitner_Three.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Leitner_Three.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aboutMe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aboutMe.Designer.cs">
+      <DependentUpon>aboutMe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullFarEast.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FullFarEast.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="LeitnerLessons.cs">
+      <DependentUpon>LeitnerLessons.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="LeitnerLessons.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LeitnerLessons.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Leitner_Three.cs">
+      <DependentUpon>Leitner_Three.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Leitner_Three.Designer.cs">
+      <DependentUpon>Leitner_Three.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newLesson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newLesson.Designer.cs">
+      <DependentUpon>newLesson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="aboutMe.resx">
+      <DependentUpon>aboutMe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="FullFarEast.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>FullFarEast.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LeitnerLessons.dbml.layout">
+      <DependentUpon>LeitnerLessons.dbml</DependentUpon>
+    </None>
+    <None Include="FullFarEast.dbml.layout">
+      <DependentUpon>FullFarEast.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <EmbeddedResource Include="newLesson.resx">
+      <DependentUpon>newLesson.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectLesson.resx">
+      <DependentUpon>SelectLesson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectStudyMode.resx">
+      <DependentUpon>SelectStudyMode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetUserCredentials.resx">
+      <DependentUpon>SetUserCredentials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetBackupPath.resx">
+      <DependentUpon>SetBackupPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Side1Side2AutoAgeingInterval.resx">
+      <DependentUpon>Side1Side2AutoAgeingInterval.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetLessonSection.resx">
+      <DependentUpon>SetLessonSection.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Side1Side3AutoAgeingInterval.resx">
+      <DependentUpon>Side1Side3AutoAgeingInterval.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Side2Side1AutoAgeingInterval.resx">
+      <DependentUpon>Side2Side1AutoAgeingInterval.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Side2Side3AutoAgeingInterval.resx">
+      <DependentUpon>Side2Side3AutoAgeingInterval.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Side3Side1AutoAgeingInterval.resx">
+      <DependentUpon>Side3Side1AutoAgeingInterval.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Side3Side2AutoAgeingInterval.resx">
+      <DependentUpon>Side3Side2AutoAgeingInterval.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SideNamesAndStudySequence.resx">
+      <DependentUpon>SideNamesAndStudySequence.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="LeitnerLessons.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>LeitnerLessons.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Leitner_Three.xsc">
+      <DependentUpon>Leitner_Three.xsd</DependentUpon>
+    </None>
+    <None Include="Leitner_Three.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Leitner_Three.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Leitner_Three.xss">
+      <DependentUpon>Leitner_Three.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SelectLesson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectLesson.designer.cs">
+      <DependentUpon>SelectLesson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectStudyMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectStudyMode.Designer.cs">
+      <DependentUpon>SelectStudyMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetUserCredentials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetUserCredentials.Designer.cs">
+      <DependentUpon>SetUserCredentials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetBackupPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetBackupPath.designer.cs">
+      <DependentUpon>SetBackupPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Side1Side2AutoAgeingInterval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Side1Side2AutoAgeingInterval.Designer.cs">
+      <DependentUpon>Side1Side2AutoAgeingInterval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetLessonSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetLessonSection.Designer.cs">
+      <DependentUpon>SetLessonSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Side1Side3AutoAgeingInterval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Side1Side3AutoAgeingInterval.designer.cs">
+      <DependentUpon>Side1Side3AutoAgeingInterval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Side2Side1AutoAgeingInterval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Side2Side1AutoAgeingInterval.designer.cs">
+      <DependentUpon>Side2Side1AutoAgeingInterval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Side2Side3AutoAgeingInterval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Side2Side3AutoAgeingInterval.designer.cs">
+      <DependentUpon>Side2Side3AutoAgeingInterval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Side3Side1AutoAgeingInterval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Side3Side1AutoAgeingInterval.designer.cs">
+      <DependentUpon>Side3Side1AutoAgeingInterval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Side3Side2AutoAgeingInterval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Side3Side2AutoAgeingInterval.designer.cs">
+      <DependentUpon>Side3Side2AutoAgeingInterval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SideNamesAndStudySequence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SideNamesAndStudySequence.Designer.cs">
+      <DependentUpon>SideNamesAndStudySequence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Variables.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.xml" />
+    <Content Include="icon.ico" />
+    <Content Include="images\Box.ico" />
+    <Content Include="images\database.ico" />
+    <Content Include="images\icon.ico" />
+    <Content Include="images\kcmfontinst.ico" />
+    <Content Include="images\My Documents.ico" />
+    <EmbeddedResource Include="Lesson01.xml" />
+    <EmbeddedResource Include="Setting01.xml" />
+    <None Include="app.config" />
+    <None Include="images\aboutMe.png" />
+    <None Include="images\export.png" />
+    <None Include="images\shift.png" />
+    <None Include="images\delete.png" />
+    <None Include="Properties\app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Default.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

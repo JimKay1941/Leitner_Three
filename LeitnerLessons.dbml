@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="JimKay" Class="LeitnerLessonsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ec2amaz-p0fq3ql;Initial Catalog=JimKay;Integrated Security=True" SettingsObjectName="Leitner_Three.Properties.Settings" SettingsPropertyName="JimKayConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Lesson01" Member="Lesson01s">
+    <Type Name="Lesson01">
+      <Column Name="ID1" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Side1" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Side2" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Side3" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="A_B_GoodCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="A_C_GoodCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="B_A_GoodCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="B_C_GoodCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="C_A_GoodCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="C_B_GoodCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="A_B_BadCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="A_C_BadCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="B_A_BadCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="B_C_BadCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="C_A_BadCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="C_B_BadCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="A_B_DisplayLocation" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="A_C_DisplayLocation" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="B_A_DisplayLocation" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="B_C_DisplayLocation" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="C_A_DisplayLocation" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="C_B_DisplayLocation" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="A_B_TestDate" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="A_C_TestDate" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="B_A_TestDate" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="B_C_TestDate" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="C_A_TestDate" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="C_B_TestDate" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Randomize" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SSMA_TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Setting01" Member="Setting01s">
+    <Type Name="Setting01">
+      <Column Name="ID1" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QuestionTextBox" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="AnswerTextBox" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="HintTextBox" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="A_B_PreviousAutoAge" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="A_C_PreviousAutoAge" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="B_A_PreviousAutoAge" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="B_C_PreviousAutoAge" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="C_A_PreviousAutoAge" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="C_B_PreviousAutoAge" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="A_B_AutoAgeInterval" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="A_C_AutoAgeInterval" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="B_A_AutoAgeInterval" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="B_C_AutoAgeInterval" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="C_A_AutoAgeInterval" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="C_B_AutoAgeInterval" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Side1Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Side2Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Side3Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="StudyMode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StudySequence" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TabOfCont" Member="TabOfConts">
+    <Type Name="TabOfCont">
+      <Column Name="ID1" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Table_Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Lesson_Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Spare01" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Spare02" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Spare03" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Spare04" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Spare05" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Spare06" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Spare07" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Spare08" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Spare09" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Spare10" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

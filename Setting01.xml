@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Student" xmlns="http://schemas.microsoft.com/linqtosql/mapping/2007">
+  <Table Name="dbo.Setting01" Member="Setting01s">
+    <Type Name="Setting01">
+      <Column Name="ID1" Member="ID1" Storage="_ID1" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" AutoSync="OnInsert" />
+      <Column Name="QuestionTextBox" Member="QuestionTextBox" Storage="_QuestionTextBox" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="AnswerTextBox" Member="AnswerTextBox" Storage="_AnswerTextBox" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="HintTextBox" Member="HintTextBox" Storage="_HintTextBox" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Member="Date" Storage="_Date" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="StartTime" Member="StartTime" Storage="_StartTime" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="A_B_PreviousAutoAge" Member="A_B_PreviousAutoAge" Storage="_A_B_PreviousAutoAge" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="A_C_PreviousAutoAge" Member="A_C_PreviousAutoAge" Storage="_A_C_PreviousAutoAge" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="B_A_PreviousAutoAge" Member="B_A_PreviousAutoAge" Storage="_B_A_PreviousAutoAge" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="B_C_PreviousAutoAge" Member="B_C_PreviousAutoAge" Storage="_B_C_PreviousAutoAge" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="C_A_PreviousAutoAge" Member="C_A_PreviousAutoAge" Storage="_C_A_PreviousAutoAge" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="C_B_PreviousAutoAge" Member="C_B_PreviousAutoAge" Storage="_C_B_PreviousAutoAge" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="A_B_AutoAgeInterval" Member="A_B_AutoAgeInterval" Storage="_A_B_AutoAgeInterval" DbType="Int NOT NULL" />
+      <Column Name="A_C_AutoAgeInterval" Member="A_C_AutoAgeInterval" Storage="_A_C_AutoAgeInterval" DbType="Int NOT NULL" />
+      <Column Name="B_A_AutoAgeInterval" Member="B_A_AutoAgeInterval" Storage="_B_A_AutoAgeInterval" DbType="Int NOT NULL" />
+      <Column Name="B_C_AutoAgeInterval" Member="B_C_AutoAgeInterval" Storage="_B_C_AutoAgeInterval" DbType="Int NOT NULL" />
+      <Column Name="C_A_AutoAgeInterval" Member="C_A_AutoAgeInterval" Storage="_C_A_AutoAgeInterval" DbType="Int NOT NULL" />
+      <Column Name="C_B_AutoAgeInterval" Member="C_B_AutoAgeInterval" Storage="_C_B_AutoAgeInterval" DbType="Int NOT NULL" />
+      <Column Name="Side1Name" Member="Side1Name" Storage="_Side1Name" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Side2Name" Member="Side2Name" Storage="_Side2Name" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Side3Name" Member="Side3Name" Storage="_Side3Name" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="StudyMode" Member="StudyMode" Storage="_StudyMode" DbType="Int NOT NULL" />
+      <Column Name="StudySequence" Member="StudySequence" Storage="_StudySequence" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

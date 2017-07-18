@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LeitnerBox" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="LeitnerBox" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Setting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="QuestionTextBox" type="xs:string" minOccurs="0" />
+              <xs:element name="AnswerTextBox" type="xs:string" minOccurs="0" />
+              <xs:element name="HintTextBox" type="xs:string" minOccurs="0" />
+              <xs:element name="Date" type="xs:string" minOccurs="0" />
+              <xs:element name="StartTime" type="xs:string" minOccurs="0" />
+              <xs:element name="A_B_PreviousAutoAge" type="xs:string" minOccurs="0" />
+              <xs:element name="A_C_PreviousAutoAge" type="xs:string" minOccurs="0" />
+              <xs:element name="B_A_PreviousAutoAge" type="xs:string" minOccurs="0" />
+              <xs:element name="B_C_PreviousAutoAge" type="xs:string" minOccurs="0" />
+              <xs:element name="C_A_PreviousAutoAge" type="xs:string" minOccurs="0" />
+              <xs:element name="C_B_PreviousAutoAge" type="xs:string" minOccurs="0" />
+              <xs:element name="A_B_AutoAgeInterval" type="xs:int" minOccurs="0" />
+              <xs:element name="A_C_AutoAgeInterval" type="xs:int" minOccurs="0" />
+              <xs:element name="B_A_AutoAgeInterval" type="xs:int" minOccurs="0" />
+              <xs:element name="B_C_AutoAgeInterval" type="xs:int" minOccurs="0" />
+              <xs:element name="C_A_AutoAgeInterval" type="xs:int" minOccurs="0" />
+              <xs:element name="C_B_AutoAgeInterval" type="xs:int" minOccurs="0" />
+              <xs:element name="Side1Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Side2Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Side3Name" type="xs:string" minOccurs="0" />
+              <xs:element name="StudySequence" type="xs:string" minOccurs="0" />
+              <xs:element name="StudyMode" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ToLearn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Side1" type="xs:string" minOccurs="0" />
+              <xs:element name="Side2" type="xs:string" minOccurs="0" />
+              <xs:element name="Side3" type="xs:string" minOccurs="0" />
+              <xs:element name="A_B_GoodCount" type="xs:int" minOccurs="0" />
+              <xs:element name="A_C_GoodCount" type="xs:int" minOccurs="0" />
+              <xs:element name="B_A_GoodCount" type="xs:int" minOccurs="0" />
+              <xs:element name="B_C_GoodCount" type="xs:int" minOccurs="0" />
+              <xs:element name="C_A_GoodCount" type="xs:int" minOccurs="0" />
+              <xs:element name="C_B_GoodCount" type="xs:int" minOccurs="0" />
+              <xs:element name="A_B_BadCount" type="xs:int" minOccurs="0" />
+              <xs:element name="A_C_BadCount" type="xs:int" minOccurs="0" />
+              <xs:element name="B_A_BadCount" type="xs:int" minOccurs="0" />
+              <xs:element name="B_C_BadCount" type="xs:int" minOccurs="0" />
+              <xs:element name="C_A_BadCount" type="xs:int" minOccurs="0" />
+              <xs:element name="C_B_BadCount" type="xs:int" minOccurs="0" />
+              <xs:element name="A_B_DisplayLocation" type="xs:int" minOccurs="0" />
+              <xs:element name="A_C_DisplayLocation" type="xs:int" minOccurs="0" />
+              <xs:element name="B_A_DisplayLocation" type="xs:int" minOccurs="0" />
+              <xs:element name="B_C_DisplayLocation" type="xs:int" minOccurs="0" />
+              <xs:element name="C_A_DisplayLocation" type="xs:int" minOccurs="0" />
+              <xs:element name="C_B_DisplayLocation" type="xs:int" minOccurs="0" />
+              <xs:element name="A_B_TestDate" type="xs:string" minOccurs="0" />
+              <xs:element name="A_C_TestDate" type="xs:string" minOccurs="0" />
+              <xs:element name="B_A_TestDate" type="xs:string" minOccurs="0" />
+              <xs:element name="B_C_TestDate" type="xs:string" minOccurs="0" />
+              <xs:element name="C_A_TestDate" type="xs:string" minOccurs="0" />
+              <xs:element name="C_B_TestDate" type="xs:string" minOccurs="0" />
+              <xs:element name="Randomize" type="xs:float" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

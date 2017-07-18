@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Student" xmlns="http://schemas.microsoft.com/linqtosql/mapping/2007">
+  <Table Name="dbo.Lesson01" Member="Lesson01s">
+    <Type Name="Lesson01">
+      <Column Name="ID1" Member="ID1" Storage="_ID1" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" AutoSync="OnInsert" />
+      <Column Name="Id" Member="Id" Storage="_Id" DbType="Int NOT NULL" />
+      <Column Name="Side1" Member="Side1" Storage="_Side1" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Side2" Member="Side2" Storage="_Side2" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Side3" Member="Side3" Storage="_Side3" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="A_B_GoodCount" Member="A_B_GoodCount" Storage="_A_B_GoodCount" DbType="Int NOT NULL" />
+      <Column Name="A_C_GoodCount" Member="A_C_GoodCount" Storage="_A_C_GoodCount" DbType="Int NOT NULL" />
+      <Column Name="B_A_GoodCount" Member="B_A_GoodCount" Storage="_B_A_GoodCount" DbType="Int NOT NULL" />
+      <Column Name="B_C_GoodCount" Member="B_C_GoodCount" Storage="_B_C_GoodCount" DbType="Int NOT NULL" />
+      <Column Name="C_A_GoodCount" Member="C_A_GoodCount" Storage="_C_A_GoodCount" DbType="Int NOT NULL" />
+      <Column Name="C_B_GoodCount" Member="C_B_GoodCount" Storage="_C_B_GoodCount" DbType="Int NOT NULL" />
+      <Column Name="A_B_BadCount" Member="A_B_BadCount" Storage="_A_B_BadCount" DbType="Int NOT NULL" />
+      <Column Name="A_C_BadCount" Member="A_C_BadCount" Storage="_A_C_BadCount" DbType="Int NOT NULL" />
+      <Column Name="B_A_BadCount" Member="B_A_BadCount" Storage="_B_A_BadCount" DbType="Int NOT NULL" />
+      <Column Name="B_C_BadCount" Member="B_C_BadCount" Storage="_B_C_BadCount" DbType="Int NOT NULL" />
+      <Column Name="C_A_BadCount" Member="C_A_BadCount" Storage="_C_A_BadCount" DbType="Int NOT NULL" />
+      <Column Name="C_B_BadCount" Member="C_B_BadCount" Storage="_C_B_BadCount" DbType="Int NOT NULL" />
+      <Column Name="A_B_DisplayLocation" Member="A_B_DisplayLocation" Storage="_A_B_DisplayLocation" DbType="Int NOT NULL" />
+      <Column Name="A_C_DisplayLocation" Member="A_C_DisplayLocation" Storage="_A_C_DisplayLocation" DbType="Int NOT NULL" />
+      <Column Name="B_A_DisplayLocation" Member="B_A_DisplayLocation" Storage="_B_A_DisplayLocation" DbType="Int NOT NULL" />
+      <Column Name="B_C_DisplayLocation" Member="B_C_DisplayLocation" Storage="_B_C_DisplayLocation" DbType="Int NOT NULL" />
+      <Column Name="C_A_DisplayLocation" Member="C_A_DisplayLocation" Storage="_C_A_DisplayLocation" DbType="Int NOT NULL" />
+      <Column Name="C_B_DisplayLocation" Member="C_B_DisplayLocation" Storage="_C_B_DisplayLocation" DbType="Int NOT NULL" />
+      <Column Name="A_B_TestDate" Member="A_B_TestDate" Storage="_A_B_TestDate" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="A_C_TestDate" Member="A_C_TestDate" Storage="_A_C_TestDate" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="B_A_TestDate" Member="B_A_TestDate" Storage="_B_A_TestDate" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="B_C_TestDate" Member="B_C_TestDate" Storage="_B_C_TestDate" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="C_A_TestDate" Member="C_A_TestDate" Storage="_C_A_TestDate" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="C_B_TestDate" Member="C_B_TestDate" Storage="_C_B_TestDate" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Randomize" Member="Randomize" Storage="_Randomize" DbType="Float" UpdateCheck="Never" />
+    </Type>
+  </Table>
+</Database>
