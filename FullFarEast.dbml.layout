@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 19.875" name="FullFarEast">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 19.625" name="FullFarEast">
   <DataContextMoniker Name="/FullFarEastDataContext" />
   <nestedChildShapes>
     <classShape Id="dd098819-88c8-4935-8fa2-d416ba49713f" absoluteBounds="5, 0.5, 2, 2.1554996744791666">
@@ -8,10 +8,10 @@
         <elementListCompartment Id="71547165-0909-4902-a592-fd09cddae8e0" absoluteBounds="5.015, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="334fcb11-8911-4203-aa28-5a51dd724c3f" absoluteBounds="2.375, 0.5, 2, 19.078025716145834">
+    <classShape Id="e9a7f22c-a245-4846-a327-1dc0dd0afbc0" absoluteBounds="2.5, 0.5, 2, 18.885724283854167">
       <DataClassMoniker Name="/FullFarEastDataContext/UniHan" />
       <nestedChildShapes>
-        <elementListCompartment Id="39c74d95-d5bf-49af-b1f6-dfc02bb7ed8c" absoluteBounds="2.39, 0.96, 1.9700000000000002, 18.518025716145832" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="3d3fb617-b853-441e-9480-2c0308f186fe" absoluteBounds="2.515, 0.96, 1.9700000000000002, 18.325724283854164" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>
