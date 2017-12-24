@@ -182,8 +182,6 @@
             // checkUseLessonIntegratedSecurity
             // 
             this.checkUseLessonIntegratedSecurity.AutoSize = true;
-            this.checkUseLessonIntegratedSecurity.Checked = true;
-            this.checkUseLessonIntegratedSecurity.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkUseLessonIntegratedSecurity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkUseLessonIntegratedSecurity.Location = new System.Drawing.Point(630, 264);
             this.checkUseLessonIntegratedSecurity.Name = "checkUseLessonIntegratedSecurity";
@@ -195,8 +193,6 @@
             // checkUseChineseStudyIntegratedSecurity
             // 
             this.checkUseChineseStudyIntegratedSecurity.AutoSize = true;
-            this.checkUseChineseStudyIntegratedSecurity.Checked = true;
-            this.checkUseChineseStudyIntegratedSecurity.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkUseChineseStudyIntegratedSecurity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkUseChineseStudyIntegratedSecurity.Location = new System.Drawing.Point(623, 64);
             this.checkUseChineseStudyIntegratedSecurity.Name = "checkUseChineseStudyIntegratedSecurity";

@@ -9,7 +9,7 @@
       <Value Profile="(Default)">sectionToolStripMenuItemSection</Value>
     </Setting>
     <Setting Name="user_path" Type="System.String" Scope="User">
-      <Value Profile="(Default)">k:\users</Value>
+      <Value Profile="(Default)">H:\OneDrive\users</Value>
     </Setting>
     <Setting Name="LessonDatabase" Type="System.String" Scope="User">
       <Value Profile="(Default)">JimKay</Value>
@@ -18,7 +18,7 @@
       <Value Profile="(Default)">97GeneralHospital</Value>
     </Setting>
     <Setting Name="ChineseStudyServer" Type="System.String" Scope="User">
-      <Value Profile="(Default)">ACER0</Value>
+      <Value Profile="(Default)">JKAYWINDOWS</Value>
     </Setting>
     <Setting Name="user_section" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -44,19 +44,19 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="ChineseStudyUserID" Type="System.String" Scope="User">
-      <Value Profile="(Default)">sa</Value>
+      <Value Profile="(Default)">Administrator</Value>
     </Setting>
     <Setting Name="ChineseStudyDatabase" Type="System.String" Scope="User">
       <Value Profile="(Default)">ChineseStudy</Value>
     </Setting>
     <Setting Name="LessonDatabaseServer" Type="System.String" Scope="User">
-      <Value Profile="(Default)">ACER0</Value>
+      <Value Profile="(Default)">JKAYWINDOWS</Value>
     </Setting>
     <Setting Name="LessonPassword" Type="System.String" Scope="User">
-      <Value Profile="(Default)">97GeneralHospital</Value>
+      <Value Profile="(Default)">42Ergotamine!</Value>
     </Setting>
     <Setting Name="LessonDatabaseUserID" Type="System.String" Scope="User">
-      <Value Profile="(Default)">sa</Value>
+      <Value Profile="(Default)">JimKay</Value>
     </Setting>
     <Setting Name="ChineseStudyConnection" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -64,10 +64,13 @@
     <Setting Name="JimKayConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=ACER0;Initial Catalog=JimKay;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=JKAYWINDOWS;Initial Catalog=JimKay;Integrated Security=True&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=ACER0;Initial Catalog=JimKay;Integrated Security=True</Value>
+      <Value Profile="(Default)">Data Source=JKAYWINDOWS;Initial Catalog=JimKay;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="Reset_GB_Counts" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

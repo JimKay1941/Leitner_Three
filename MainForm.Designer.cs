@@ -135,6 +135,8 @@
             this.sideNamesAndStudySequenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lessonFilePathToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backupFilePathToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetGoodBadCountsOnRenumberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preserveGoodBadCountsOnRenumberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemCreateNewUser = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemSelectUser = new System.Windows.Forms.ToolStripMenuItem();
@@ -671,7 +673,9 @@
             this.dateFormatToolStripMenuItem,
             this.sideNamesAndStudySequenceToolStripMenuItem,
             this.lessonFilePathToolStripMenuItem,
-            this.backupFilePathToolStripMenuItem});
+            this.backupFilePathToolStripMenuItem,
+            this.resetGoodBadCountsOnRenumberToolStripMenuItem,
+            this.preserveGoodBadCountsOnRenumberToolStripMenuItem});
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
             this.settingToolStripMenuItem.Size = new System.Drawing.Size(68, 39);
             this.settingToolStripMenuItem.Text = "Setting";
@@ -682,7 +686,7 @@
             this.ToolStripMenuItemRightToLeftQuestion,
             this.ToolStripMenuItemLeftToRightQuestion});
             this.questionTextboxesToolStripMenuItem.Name = "questionTextboxesToolStripMenuItem";
-            this.questionTextboxesToolStripMenuItem.Size = new System.Drawing.Size(295, 24);
+            this.questionTextboxesToolStripMenuItem.Size = new System.Drawing.Size(348, 24);
             this.questionTextboxesToolStripMenuItem.Text = "Question Textboxes";
             // 
             // ToolStripMenuItemRightToLeftQuestion
@@ -705,7 +709,7 @@
             this.ToolStripMenuItemRightToLeftAnswer,
             this.ToolStripMenuItemLeftToRightAnswer});
             this.answerTextboxesToolStripMenuItem.Name = "answerTextboxesToolStripMenuItem";
-            this.answerTextboxesToolStripMenuItem.Size = new System.Drawing.Size(295, 24);
+            this.answerTextboxesToolStripMenuItem.Size = new System.Drawing.Size(348, 24);
             this.answerTextboxesToolStripMenuItem.Text = "Answer Textboxes";
             // 
             // ToolStripMenuItemRightToLeftAnswer
@@ -729,7 +733,7 @@
             this.ToolStripMenuItemRightToLeftHint,
             this.ToolStripMenuItemLeftToRightHint});
             this.dateToolStripMenuItem.Name = global::Leitner_Three.Properties.Settings.Default.Date;
-            this.dateToolStripMenuItem.Size = new System.Drawing.Size(295, 24);
+            this.dateToolStripMenuItem.Size = new System.Drawing.Size(348, 24);
             this.dateToolStripMenuItem.Text = "Hint Textboxes";
             // 
             // ToolStripMenuItemRightToLeftHint
@@ -749,12 +753,12 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(292, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(345, 6);
             // 
             // sectionToolStripMenuItemSection
             // 
             this.sectionToolStripMenuItemSection.Name = global::Leitner_Three.Properties.Settings.Default.Section;
-            this.sectionToolStripMenuItemSection.Size = new System.Drawing.Size(295, 24);
+            this.sectionToolStripMenuItemSection.Size = new System.Drawing.Size(348, 24);
             this.sectionToolStripMenuItemSection.Text = "Section";
             this.sectionToolStripMenuItemSection.Click += new System.EventHandler(this.sectionToolStripMenuItemSection_Click);
             // 
@@ -768,7 +772,7 @@
             this.side3Side1ToolStripMenuItem,
             this.side3Side2ToolStripMenuItem});
             this.autoAgingIntervalToolStripMenuItem.Name = "autoAgingIntervalToolStripMenuItem";
-            this.autoAgingIntervalToolStripMenuItem.Size = new System.Drawing.Size(295, 24);
+            this.autoAgingIntervalToolStripMenuItem.Size = new System.Drawing.Size(348, 24);
             this.autoAgingIntervalToolStripMenuItem.Text = "Auto Aging Interval";
             // 
             // side1Side2ToolStripMenuItem
@@ -816,7 +820,7 @@
             // selectStudyModeToolStripMenuItem
             // 
             this.selectStudyModeToolStripMenuItem.Name = "selectStudyModeToolStripMenuItem";
-            this.selectStudyModeToolStripMenuItem.Size = new System.Drawing.Size(295, 24);
+            this.selectStudyModeToolStripMenuItem.Size = new System.Drawing.Size(348, 24);
             this.selectStudyModeToolStripMenuItem.Text = "Select Study Mode (F2)";
             this.selectStudyModeToolStripMenuItem.Click += new System.EventHandler(this.selectStudyModeToolStripMenuItem_Click);
             // 
@@ -826,7 +830,7 @@
             this.ToolStripMenuItemChristianDate,
             this.ToolStripMenuItemPersianDate});
             this.dateFormatToolStripMenuItem.Name = "dateFormatToolStripMenuItem";
-            this.dateFormatToolStripMenuItem.Size = new System.Drawing.Size(295, 24);
+            this.dateFormatToolStripMenuItem.Size = new System.Drawing.Size(348, 24);
             this.dateFormatToolStripMenuItem.Text = "Date Format";
             // 
             // ToolStripMenuItemChristianDate
@@ -846,23 +850,37 @@
             // sideNamesAndStudySequenceToolStripMenuItem
             // 
             this.sideNamesAndStudySequenceToolStripMenuItem.Name = "sideNamesAndStudySequenceToolStripMenuItem";
-            this.sideNamesAndStudySequenceToolStripMenuItem.Size = new System.Drawing.Size(295, 24);
+            this.sideNamesAndStudySequenceToolStripMenuItem.Size = new System.Drawing.Size(348, 24);
             this.sideNamesAndStudySequenceToolStripMenuItem.Text = "Side Names and Study Sequence";
             this.sideNamesAndStudySequenceToolStripMenuItem.Click += new System.EventHandler(this.sideNamesAndStudySequenceToolStripMenuItem_Click);
             // 
             // lessonFilePathToolStripMenuItem
             // 
             this.lessonFilePathToolStripMenuItem.Name = "lessonFilePathToolStripMenuItem";
-            this.lessonFilePathToolStripMenuItem.Size = new System.Drawing.Size(295, 24);
+            this.lessonFilePathToolStripMenuItem.Size = new System.Drawing.Size(348, 24);
             this.lessonFilePathToolStripMenuItem.Text = "Set User Credentials";
             this.lessonFilePathToolStripMenuItem.Click += new System.EventHandler(this.SetUserCredentialsToolStripMenuItem_Click);
             // 
             // backupFilePathToolStripMenuItem
             // 
             this.backupFilePathToolStripMenuItem.Name = "backupFilePathToolStripMenuItem";
-            this.backupFilePathToolStripMenuItem.Size = new System.Drawing.Size(295, 24);
+            this.backupFilePathToolStripMenuItem.Size = new System.Drawing.Size(348, 24);
             this.backupFilePathToolStripMenuItem.Text = "Backup File Path";
             this.backupFilePathToolStripMenuItem.Click += new System.EventHandler(this.backupFilePathToolStripMenuItem_Click);
+            // 
+            // resetGoodBadCountsOnRenumberToolStripMenuItem
+            // 
+            this.resetGoodBadCountsOnRenumberToolStripMenuItem.Name = "resetGoodBadCountsOnRenumberToolStripMenuItem";
+            this.resetGoodBadCountsOnRenumberToolStripMenuItem.Size = new System.Drawing.Size(348, 24);
+            this.resetGoodBadCountsOnRenumberToolStripMenuItem.Text = "Reset Good/Bad Counts on Renumber";
+            this.resetGoodBadCountsOnRenumberToolStripMenuItem.Click += new System.EventHandler(this.resetGoodBadCountsOnRenumberToolStripMenuItem_Click);
+            // 
+            // preserveGoodBadCountsOnRenumberToolStripMenuItem
+            // 
+            this.preserveGoodBadCountsOnRenumberToolStripMenuItem.Name = "preserveGoodBadCountsOnRenumberToolStripMenuItem";
+            this.preserveGoodBadCountsOnRenumberToolStripMenuItem.Size = new System.Drawing.Size(348, 24);
+            this.preserveGoodBadCountsOnRenumberToolStripMenuItem.Text = "Preserve Good/Bad Counts on Renumber";
+            this.preserveGoodBadCountsOnRenumberToolStripMenuItem.Click += new System.EventHandler(this.preserveGoodBadCountsOnRenumberToolStripMenuItem_Click);
             // 
             // usersToolStripMenuItem
             // 
@@ -873,7 +891,6 @@
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             this.usersToolStripMenuItem.Size = new System.Drawing.Size(71, 39);
             this.usersToolStripMenuItem.Text = "Lessons";
-            this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
             // 
             // ToolStripMenuItemCreateNewUser
             // 
@@ -3428,6 +3445,8 @@
         private System.Windows.Forms.ToolStripMenuItem updateFEIToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem archiveBacklogToolStripMenuItem;
         private System.Windows.Forms.Button btnbutton1;
+        private System.Windows.Forms.ToolStripMenuItem resetGoodBadCountsOnRenumberToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem preserveGoodBadCountsOnRenumberToolStripMenuItem;
     }
 }
 

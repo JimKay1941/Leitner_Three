@@ -4005,11 +4005,92 @@ namespace Leitner_Three
                         RecordIdChanged(element, counter);
                         element.Id = counter;
                     }
+
+                    switch (Variables.Leitner.Setting[0].StudyMode)
+                    {
+                        case 0:
+                            if (element.A_B_GoodCount != 0 && Properties.Settings.Default.Reset_GB_Counts)
+                            {
+                                GoodCountChanged(element);
+                            }
+                            break;
+                        case 1:
+                            if (element.A_C_GoodCount != 0 && Properties.Settings.Default.Reset_GB_Counts)
+                            {
+                                GoodCountChanged(element);
+                            }
+                            break;
+                        case 2:
+                            if (element.B_A_GoodCount != 0 && Properties.Settings.Default.Reset_GB_Counts)
+                            {
+                                GoodCountChanged(element);
+                            }
+                            break;
+                        case 3:
+                            if (element.B_C_GoodCount != 0 && Properties.Settings.Default.Reset_GB_Counts)
+                            {
+                                GoodCountChanged(element);
+                            }
+                            break;
+                        case 4:
+                            if (element.C_A_GoodCount != 0 && Properties.Settings.Default.Reset_GB_Counts)
+                            {
+                                GoodCountChanged(element);
+                            }
+                            break;
+                        case 5:
+                            if (element.C_B_GoodCount != 0 && Properties.Settings.Default.Reset_GB_Counts)
+                            {
+                                GoodCountChanged(element);
+                            }
+                            break;
+                    }
+
+                    switch (Variables.Leitner.Setting[0].StudyMode)
+                    {
+                        case 0:
+                            if (element.A_B_BadCount != 0 && Properties.Settings.Default.Reset_GB_Counts)
+                            {
+                                BadCountChanged(element);
+                            }
+                            break;
+                        case 1:
+                            if (element.A_C_BadCount != 0 && Properties.Settings.Default.Reset_GB_Counts)
+                            {
+                                BadCountChanged(element);
+                            }
+                            break;
+                        case 2:
+                            if (element.B_A_BadCount != 0 && Properties.Settings.Default.Reset_GB_Counts)
+                            {
+                                BadCountChanged(element);
+                            }
+                            break;
+                        case 3:
+                            if (element.B_C_BadCount != 0 && Properties.Settings.Default.Reset_GB_Counts)
+                            {
+                                BadCountChanged(element);
+                            }
+                            break;
+                        case 4:
+                            if (element.C_A_BadCount != 0 && Properties.Settings.Default.Reset_GB_Counts)
+                            {
+                                BadCountChanged(element);
+                            }
+                            break;
+                        case 5:
+                            if (element.C_B_BadCount != 0 && Properties.Settings.Default.Reset_GB_Counts)
+                            {
+                                BadCountChanged(element);
+                            }
+                            break;
+                    }
                 }
 
                 //MemToSQL();
 
-                addNodesToTreeView();
+                //addNodesToTreeView();
+                loadXML();
 
                 successful("Renumbering", "The elements have been renumbered successfully");
                 this.Cursor = Cursors.Default;
@@ -6325,9 +6406,102 @@ namespace Leitner_Three
             }
         }
 
-        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        private void resetGoodBadCountsOnRenumberToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Properties.Settings.Default.Reset_GB_Counts = true;
+        }
 
+        private void preserveGoodBadCountsOnRenumberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Reset_GB_Counts = false;
+        }
+
+        private static void GoodCountChanged(LeitnerBox.ToLearnRow changedRecord)
+        {
+            using (var conn = new SqlConnection())
+            {
+                conn.ConnectionString = Properties.Settings.Default.LessonConnectionString;
+                conn.Open();
+
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+
+                    switch (Variables.Leitner.Setting[0].StudyMode)
+                    {
+                        case 0:
+                            cmd.CommandText = "UPDATE " + Variables.LessonTableName + " SET A_B_GoodCount = " + 0
+                                 + " WHERE Id = " + changedRecord.Id;
+                            break;
+                        case 1:
+                            cmd.CommandText = "UPDATE " + Variables.LessonTableName + " SET A_C_GoodCount = " + 0
+                                 + " WHERE Id = " + changedRecord.Id;
+                            break;
+                        case 2:
+                            cmd.CommandText = "UPDATE " + Variables.LessonTableName + " SET B_A_GoodCount = " + 0
+                                 + " WHERE Id = " + changedRecord.Id;
+                            break;
+                        case 3:
+                            cmd.CommandText = "UPDATE " + Variables.LessonTableName + " SET B_C_GoodCount = " + 0
+                                 + " WHERE Id = " + changedRecord.Id;
+                            break;
+                        case 4:
+                            cmd.CommandText = "UPDATE " + Variables.LessonTableName + " SET C_A_GoodCount = " + 0
+                                 + " WHERE Id = " + changedRecord.Id;
+                            break;
+                        case 5:
+                            cmd.CommandText = "UPDATE " + Variables.LessonTableName + " SET C_B_GoodCount = " + 0
+                                 + " WHERE Id = " + changedRecord.Id;
+                            break;
+                    }
+                    cmd.ExecuteNonQuery();
+                }
+                conn.Close();
+            }
+        }
+
+        private static void BadCountChanged(LeitnerBox.ToLearnRow changedRecord)
+        {
+            using (var conn = new SqlConnection())
+            {
+                conn.ConnectionString = Properties.Settings.Default.LessonConnectionString;
+                conn.Open();
+
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+
+                    switch (Variables.Leitner.Setting[0].StudyMode)
+                    {
+                        case 0:
+                            cmd.CommandText = "UPDATE " + Variables.LessonTableName + " SET A_B_BadCount = " + 0
+                                 + " WHERE Id = " + changedRecord.Id;
+                            break;
+                        case 1:
+                            cmd.CommandText = "UPDATE " + Variables.LessonTableName + " SET A_C_BadCount = " + 0
+                                 + " WHERE Id = " + changedRecord.Id;
+                            break;
+                        case 2:
+                            cmd.CommandText = "UPDATE " + Variables.LessonTableName + " SET B_A_BadCount = " + 0
+                                 + " WHERE Id = " + changedRecord.Id;
+                            break;
+                        case 3:
+                            cmd.CommandText = "UPDATE " + Variables.LessonTableName + " SET B_C_BadCount = " + 0
+                                 + " WHERE Id = " + changedRecord.Id;
+                            break;
+                        case 4:
+                            cmd.CommandText = "UPDATE " + Variables.LessonTableName + " SET C_A_BadCount = " + 0
+                                 + " WHERE Id = " + changedRecord.Id;
+                            break;
+                        case 5:
+                            cmd.CommandText = "UPDATE " + Variables.LessonTableName + " SET C_B_BadCount = " + 0
+                                 + " WHERE Id = " + changedRecord.Id;
+                            break;
+                    }
+                    cmd.ExecuteNonQuery();
+                }
+                conn.Close();
+            }
         }
     }
 }

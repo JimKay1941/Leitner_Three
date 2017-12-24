@@ -12,7 +12,7 @@ namespace Leitner_Three.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.1.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.3.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -49,7 +49,7 @@ namespace Leitner_Three.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("k:\\users")]
+        [global::System.Configuration.DefaultSettingValueAttribute("H:\\OneDrive\\users")]
         public string user_path {
             get {
                 return ((string)(this["user_path"]));
@@ -85,7 +85,7 @@ namespace Leitner_Three.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ACER0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("JKAYWINDOWS")]
         public string ChineseStudyServer {
             get {
                 return ((string)(this["ChineseStudyServer"]));
@@ -166,7 +166,7 @@ namespace Leitner_Three.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("sa")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Administrator")]
         public string ChineseStudyUserID {
             get {
                 return ((string)(this["ChineseStudyUserID"]));
@@ -190,7 +190,7 @@ namespace Leitner_Three.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ACER0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("JKAYWINDOWS")]
         public string LessonDatabaseServer {
             get {
                 return ((string)(this["LessonDatabaseServer"]));
@@ -202,7 +202,7 @@ namespace Leitner_Three.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("97GeneralHospital")]
+        [global::System.Configuration.DefaultSettingValueAttribute("42Ergotamine!")]
         public string LessonPassword {
             get {
                 return ((string)(this["LessonPassword"]));
@@ -214,7 +214,7 @@ namespace Leitner_Three.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("sa")]
+        [global::System.Configuration.DefaultSettingValueAttribute("JimKay")]
         public string LessonDatabaseUserID {
             get {
                 return ((string)(this["LessonDatabaseUserID"]));
@@ -239,10 +239,22 @@ namespace Leitner_Three.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ACER0;Initial Catalog=JimKay;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JKAYWINDOWS;Initial Catalog=JimKay;Integrated Security=True")]
         public string JimKayConnectionString {
             get {
                 return ((string)(this["JimKayConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Reset_GB_Counts {
+            get {
+                return ((bool)(this["Reset_GB_Counts"]));
+            }
+            set {
+                this["Reset_GB_Counts"] = value;
             }
         }
     }
