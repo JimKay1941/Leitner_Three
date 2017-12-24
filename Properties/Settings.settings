@@ -9,7 +9,7 @@
       <Value Profile="(Default)">sectionToolStripMenuItemSection</Value>
     </Setting>
     <Setting Name="user_path" Type="System.String" Scope="User">
-      <Value Profile="(Default)">H:\OneDrive\users</Value>
+      <Value Profile="(Default)">H:\OneDrive\users\</Value>
     </Setting>
     <Setting Name="LessonDatabase" Type="System.String" Scope="User">
       <Value Profile="(Default)">JimKay</Value>

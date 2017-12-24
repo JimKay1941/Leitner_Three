@@ -49,7 +49,7 @@ namespace Leitner_Three.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("H:\\OneDrive\\users")]
+        [global::System.Configuration.DefaultSettingValueAttribute("H:\\OneDrive\\users\\")]
         public string user_path {
             get {
                 return ((string)(this["user_path"]));
