@@ -542,8 +542,8 @@
             this.treeView1.Size = new System.Drawing.Size(213, 684);
             this.treeView1.TabIndex = 1;
             this.treeView1.TabStop = false;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
-            this.treeView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.treeView1_MouseClick);
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeView1_AfterSelect);
+            this.treeView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TreeView1_MouseClick);
             // 
             // imageList1
             // 
@@ -611,14 +611,14 @@
             this.exportAllWordsToolStripMenuItem.Name = "exportAllWordsToolStripMenuItem";
             this.exportAllWordsToolStripMenuItem.Size = new System.Drawing.Size(209, 24);
             this.exportAllWordsToolStripMenuItem.Text = "Export all words";
-            this.exportAllWordsToolStripMenuItem.Click += new System.EventHandler(this.exportAllWordsToolStripMenuItem_Click);
+            this.exportAllWordsToolStripMenuItem.Click += new System.EventHandler(this.ExportAllWordsToolStripMenuItem_Click);
             // 
             // optimizeXmlFileToolStripMenuItem
             // 
             this.optimizeXmlFileToolStripMenuItem.Name = "optimizeXmlFileToolStripMenuItem";
             this.optimizeXmlFileToolStripMenuItem.Size = new System.Drawing.Size(209, 24);
             this.optimizeXmlFileToolStripMenuItem.Text = "Renumber Words";
-            this.optimizeXmlFileToolStripMenuItem.Click += new System.EventHandler(this.renumberXmlFileToolStripMenuItem_Click);
+            this.optimizeXmlFileToolStripMenuItem.Click += new System.EventHandler(this.RenumberXmlFileToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
@@ -637,28 +637,28 @@
             this.archiveBacklogToolStripMenuItem.Name = "archiveBacklogToolStripMenuItem";
             this.archiveBacklogToolStripMenuItem.Size = new System.Drawing.Size(209, 24);
             this.archiveBacklogToolStripMenuItem.Text = "Archive Backlog";
-            this.archiveBacklogToolStripMenuItem.Click += new System.EventHandler(this.archiveBacklogToolStripMenuItem_Click);
+            this.archiveBacklogToolStripMenuItem.Click += new System.EventHandler(this.ArchiveBacklogToolStripMenuItem_Click);
             // 
             // primeBox1ToolStripMenuItem
             // 
             this.primeBox1ToolStripMenuItem.Name = "primeBox1ToolStripMenuItem";
             this.primeBox1ToolStripMenuItem.Size = new System.Drawing.Size(209, 24);
             this.primeBox1ToolStripMenuItem.Text = "Prime Box 1 (F3)";
-            this.primeBox1ToolStripMenuItem.Click += new System.EventHandler(this.primeBox1ToolStripMenuItem_Click);
+            this.primeBox1ToolStripMenuItem.Click += new System.EventHandler(this.PrimeBox1ToolStripMenuItem_Click);
             // 
             // updateFEIToolStripMenuItem
             // 
             this.updateFEIToolStripMenuItem.Name = "updateFEIToolStripMenuItem";
             this.updateFEIToolStripMenuItem.Size = new System.Drawing.Size(209, 24);
             this.updateFEIToolStripMenuItem.Text = "Update FEI";
-            this.updateFEIToolStripMenuItem.Click += new System.EventHandler(this.updateFEIToolStripMenuItem_Click);
+            this.updateFEIToolStripMenuItem.Click += new System.EventHandler(this.UpdateFEIToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(209, 24);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // settingToolStripMenuItem
             // 
@@ -760,7 +760,7 @@
             this.sectionToolStripMenuItemSection.Name = global::Leitner_Three.Properties.Settings.Default.Section;
             this.sectionToolStripMenuItemSection.Size = new System.Drawing.Size(348, 24);
             this.sectionToolStripMenuItemSection.Text = "Section";
-            this.sectionToolStripMenuItemSection.Click += new System.EventHandler(this.sectionToolStripMenuItemSection_Click);
+            this.sectionToolStripMenuItemSection.Click += new System.EventHandler(this.SectionToolStripMenuItemSection_Click);
             // 
             // autoAgingIntervalToolStripMenuItem
             // 
@@ -780,49 +780,49 @@
             this.side1Side2ToolStripMenuItem.Name = "side1Side2ToolStripMenuItem";
             this.side1Side2ToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
             this.side1Side2ToolStripMenuItem.Text = "Side 1 / Side 2";
-            this.side1Side2ToolStripMenuItem.Click += new System.EventHandler(this.side1Side2ToolStripMenuItem_Click);
+            this.side1Side2ToolStripMenuItem.Click += new System.EventHandler(this.Side1Side2ToolStripMenuItem_Click);
             // 
             // side1Side3ToolStripMenuItem
             // 
             this.side1Side3ToolStripMenuItem.Name = "side1Side3ToolStripMenuItem";
             this.side1Side3ToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
             this.side1Side3ToolStripMenuItem.Text = "Side 1 / Side 3";
-            this.side1Side3ToolStripMenuItem.Click += new System.EventHandler(this.side1Side3ToolStripMenuItem_Click);
+            this.side1Side3ToolStripMenuItem.Click += new System.EventHandler(this.Side1Side3ToolStripMenuItem_Click);
             // 
             // side2Side1ToolStripMenuItem
             // 
             this.side2Side1ToolStripMenuItem.Name = "side2Side1ToolStripMenuItem";
             this.side2Side1ToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
             this.side2Side1ToolStripMenuItem.Text = "Side 2 / Side 1";
-            this.side2Side1ToolStripMenuItem.Click += new System.EventHandler(this.side2Side1ToolStripMenuItem_Click);
+            this.side2Side1ToolStripMenuItem.Click += new System.EventHandler(this.Side2Side1ToolStripMenuItem_Click);
             // 
             // side2Side3ToolStripMenuItem
             // 
             this.side2Side3ToolStripMenuItem.Name = "side2Side3ToolStripMenuItem";
             this.side2Side3ToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
             this.side2Side3ToolStripMenuItem.Text = "Side 2 / Side 3";
-            this.side2Side3ToolStripMenuItem.Click += new System.EventHandler(this.side2Side3ToolStripMenuItem_Click);
+            this.side2Side3ToolStripMenuItem.Click += new System.EventHandler(this.Side2Side3ToolStripMenuItem_Click);
             // 
             // side3Side1ToolStripMenuItem
             // 
             this.side3Side1ToolStripMenuItem.Name = "side3Side1ToolStripMenuItem";
             this.side3Side1ToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
             this.side3Side1ToolStripMenuItem.Text = "Side 3 / Side 1";
-            this.side3Side1ToolStripMenuItem.Click += new System.EventHandler(this.side3Side1ToolStripMenuItem_Click);
+            this.side3Side1ToolStripMenuItem.Click += new System.EventHandler(this.Side3Side1ToolStripMenuItem_Click);
             // 
             // side3Side2ToolStripMenuItem
             // 
             this.side3Side2ToolStripMenuItem.Name = "side3Side2ToolStripMenuItem";
             this.side3Side2ToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
             this.side3Side2ToolStripMenuItem.Text = "Side 3 / Side 2";
-            this.side3Side2ToolStripMenuItem.Click += new System.EventHandler(this.side3Side2ToolStripMenuItem_Click);
+            this.side3Side2ToolStripMenuItem.Click += new System.EventHandler(this.Side3Side2ToolStripMenuItem_Click);
             // 
             // selectStudyModeToolStripMenuItem
             // 
             this.selectStudyModeToolStripMenuItem.Name = "selectStudyModeToolStripMenuItem";
             this.selectStudyModeToolStripMenuItem.Size = new System.Drawing.Size(348, 24);
             this.selectStudyModeToolStripMenuItem.Text = "Select Study Mode (F2)";
-            this.selectStudyModeToolStripMenuItem.Click += new System.EventHandler(this.selectStudyModeToolStripMenuItem_Click);
+            this.selectStudyModeToolStripMenuItem.Click += new System.EventHandler(this.SelectStudyModeToolStripMenuItem_Click);
             // 
             // dateFormatToolStripMenuItem
             // 
@@ -852,7 +852,7 @@
             this.sideNamesAndStudySequenceToolStripMenuItem.Name = "sideNamesAndStudySequenceToolStripMenuItem";
             this.sideNamesAndStudySequenceToolStripMenuItem.Size = new System.Drawing.Size(348, 24);
             this.sideNamesAndStudySequenceToolStripMenuItem.Text = "Side Names and Study Sequence";
-            this.sideNamesAndStudySequenceToolStripMenuItem.Click += new System.EventHandler(this.sideNamesAndStudySequenceToolStripMenuItem_Click);
+            this.sideNamesAndStudySequenceToolStripMenuItem.Click += new System.EventHandler(this.SideNamesAndStudySequenceToolStripMenuItem_Click);
             // 
             // lessonFilePathToolStripMenuItem
             // 
@@ -866,21 +866,21 @@
             this.backupFilePathToolStripMenuItem.Name = "backupFilePathToolStripMenuItem";
             this.backupFilePathToolStripMenuItem.Size = new System.Drawing.Size(348, 24);
             this.backupFilePathToolStripMenuItem.Text = "Backup File Path";
-            this.backupFilePathToolStripMenuItem.Click += new System.EventHandler(this.backupFilePathToolStripMenuItem_Click);
+            this.backupFilePathToolStripMenuItem.Click += new System.EventHandler(this.BackupFilePathToolStripMenuItem_Click);
             // 
             // resetGoodBadCountsOnRenumberToolStripMenuItem
             // 
             this.resetGoodBadCountsOnRenumberToolStripMenuItem.Name = "resetGoodBadCountsOnRenumberToolStripMenuItem";
             this.resetGoodBadCountsOnRenumberToolStripMenuItem.Size = new System.Drawing.Size(348, 24);
             this.resetGoodBadCountsOnRenumberToolStripMenuItem.Text = "Reset Good/Bad Counts on Renumber";
-            this.resetGoodBadCountsOnRenumberToolStripMenuItem.Click += new System.EventHandler(this.resetGoodBadCountsOnRenumberToolStripMenuItem_Click);
+            this.resetGoodBadCountsOnRenumberToolStripMenuItem.Click += new System.EventHandler(this.ResetGoodBadCountsOnRenumberToolStripMenuItem_Click);
             // 
             // preserveGoodBadCountsOnRenumberToolStripMenuItem
             // 
             this.preserveGoodBadCountsOnRenumberToolStripMenuItem.Name = "preserveGoodBadCountsOnRenumberToolStripMenuItem";
             this.preserveGoodBadCountsOnRenumberToolStripMenuItem.Size = new System.Drawing.Size(348, 24);
             this.preserveGoodBadCountsOnRenumberToolStripMenuItem.Text = "Preserve Good/Bad Counts on Renumber";
-            this.preserveGoodBadCountsOnRenumberToolStripMenuItem.Click += new System.EventHandler(this.preserveGoodBadCountsOnRenumberToolStripMenuItem_Click);
+            this.preserveGoodBadCountsOnRenumberToolStripMenuItem.Click += new System.EventHandler(this.PreserveGoodBadCountsOnRenumberToolStripMenuItem_Click);
             // 
             // usersToolStripMenuItem
             // 
@@ -911,49 +911,49 @@
             this.randomizeToolStripMenuItem.Name = "randomizeToolStripMenuItem";
             this.randomizeToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
             this.randomizeToolStripMenuItem.Text = "Randomize";
-            this.randomizeToolStripMenuItem.Click += new System.EventHandler(this.randomizeToolStripMenuItem_Click);
+            this.randomizeToolStripMenuItem.Click += new System.EventHandler(this.RandomizeToolStripMenuItem_Click);
             // 
             // f4AutoAgeToolStripMenuItem
             // 
             this.f4AutoAgeToolStripMenuItem.Name = "f4AutoAgeToolStripMenuItem";
             this.f4AutoAgeToolStripMenuItem.Size = new System.Drawing.Size(113, 39);
             this.f4AutoAgeToolStripMenuItem.Text = "Auto Age (F4)";
-            this.f4AutoAgeToolStripMenuItem.Click += new System.EventHandler(this.f4AutoAgeToolStripMenuItem_Click);
+            this.f4AutoAgeToolStripMenuItem.Click += new System.EventHandler(this.F4AutoAgeToolStripMenuItem_Click);
             // 
             // f3PrimeToolStripMenuItem
             // 
             this.f3PrimeToolStripMenuItem.Name = "f3PrimeToolStripMenuItem";
             this.f3PrimeToolStripMenuItem.Size = new System.Drawing.Size(88, 39);
             this.f3PrimeToolStripMenuItem.Text = "Prime (F3)";
-            this.f3PrimeToolStripMenuItem.Click += new System.EventHandler(this.f3PrimeToolStripMenuItem_Click);
+            this.f3PrimeToolStripMenuItem.Click += new System.EventHandler(this.F3PrimeToolStripMenuItem_Click);
             // 
             // f2NextModeToolStripMenuItem
             // 
             this.f2NextModeToolStripMenuItem.Name = "f2NextModeToolStripMenuItem";
             this.f2NextModeToolStripMenuItem.Size = new System.Drawing.Size(124, 39);
             this.f2NextModeToolStripMenuItem.Text = "Next Mode (F2)";
-            this.f2NextModeToolStripMenuItem.Click += new System.EventHandler(this.f2NextModeToolStripMenuItem_Click);
+            this.f2NextModeToolStripMenuItem.Click += new System.EventHandler(this.F2NextModeToolStripMenuItem_Click);
             // 
             // f12ArchiveToolStripMenuItem
             // 
             this.f12ArchiveToolStripMenuItem.Name = "f12ArchiveToolStripMenuItem";
             this.f12ArchiveToolStripMenuItem.Size = new System.Drawing.Size(107, 39);
             this.f12ArchiveToolStripMenuItem.Text = "Archive (F12)";
-            this.f12ArchiveToolStripMenuItem.Click += new System.EventHandler(this.f12ArchiveToolStripMenuItem_Click);
+            this.f12ArchiveToolStripMenuItem.Click += new System.EventHandler(this.F12ArchiveToolStripMenuItem_Click);
             // 
             // backupLessonToolStripMenuItem
             // 
             this.backupLessonToolStripMenuItem.Name = "backupLessonToolStripMenuItem";
             this.backupLessonToolStripMenuItem.Size = new System.Drawing.Size(69, 39);
             this.backupLessonToolStripMenuItem.Text = "Backup";
-            this.backupLessonToolStripMenuItem.Click += new System.EventHandler(this.backupLessonToolStripMenuItem_Click);
+            this.backupLessonToolStripMenuItem.Click += new System.EventHandler(this.BackupLessonToolStripMenuItem_Click);
             // 
             // restoreLessonToolStripMenuItem
             // 
             this.restoreLessonToolStripMenuItem.Name = "restoreLessonToolStripMenuItem";
             this.restoreLessonToolStripMenuItem.Size = new System.Drawing.Size(71, 39);
             this.restoreLessonToolStripMenuItem.Text = "Restore";
-            this.restoreLessonToolStripMenuItem.Click += new System.EventHandler(this.restoreLessonToolStripMenuItem_Click);
+            this.restoreLessonToolStripMenuItem.Click += new System.EventHandler(this.RestoreLessonToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
@@ -970,7 +970,7 @@
             this.tabControl1.Size = new System.Drawing.Size(752, 629);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.TabStop = false;
-            this.tabControl1.Enter += new System.EventHandler(this.tabPageStatistics_Enter);
+            this.tabControl1.Enter += new System.EventHandler(this.TabPageStatistics_Enter);
             // 
             // tabPageAddQuestions
             // 
@@ -1014,7 +1014,7 @@
             this.tabPageAddQuestions.Size = new System.Drawing.Size(744, 596);
             this.tabPageAddQuestions.TabIndex = 1;
             this.tabPageAddQuestions.Text = "Browse/Edit/Add";
-            this.tabPageAddQuestions.Enter += new System.EventHandler(this.tabPageInsertWord_Enter);
+            this.tabPageAddQuestions.Enter += new System.EventHandler(this.TabPageInsertWord_Enter);
             // 
             // listBoxAutoComplete
             // 
@@ -1038,8 +1038,8 @@
             this.listBoxAutoComplete.Sorted = true;
             this.listBoxAutoComplete.TabIndex = 0;
             this.listBoxAutoComplete.Visible = false;
-            this.listBoxAutoComplete.Click += new System.EventHandler(this.listBoxAutoComplete_DoubleClick);
-            this.listBoxAutoComplete.DoubleClick += new System.EventHandler(this.listBoxAutoComplete_DoubleClick);
+            this.listBoxAutoComplete.Click += new System.EventHandler(this.ListBoxAutoComplete_DoubleClick);
+            this.listBoxAutoComplete.DoubleClick += new System.EventHandler(this.ListBoxAutoComplete_DoubleClick);
             // 
             // btnbutton1
             // 
@@ -1119,7 +1119,7 @@
             this.textCh.Name = "textCh";
             this.textCh.Size = new System.Drawing.Size(57, 46);
             this.textCh.TabIndex = 32;
-            this.textCh.TextChanged += new System.EventHandler(this.textCh_TextChanged);
+            this.textCh.TextChanged += new System.EventHandler(this.TextCh_TextChanged);
             // 
             // label29
             // 
@@ -1153,8 +1153,8 @@
             this.buttonSave2.TabIndex = 4;
             this.buttonSave2.Text = "Save";
             this.buttonSave2.UseVisualStyleBackColor = false;
-            this.buttonSave2.Click += new System.EventHandler(this.buttonSave2_Click);
-            this.buttonSave2.Enter += new System.EventHandler(this.buttonSave2_Click);
+            this.buttonSave2.Click += new System.EventHandler(this.ButtonSave2_Click);
+            this.buttonSave2.Enter += new System.EventHandler(this.ButtonSave2_Click);
             // 
             // label14
             // 
@@ -1291,7 +1291,7 @@
             this.buttonAdd.TabIndex = 4;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = false;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAddNewWord_Click);
+            this.buttonAdd.Click += new System.EventHandler(this.ButtonAddNewWord_Click);
             // 
             // label5
             // 
@@ -1352,10 +1352,10 @@
             this.textBoxNewHint.Name = "textBoxNewHint";
             this.textBoxNewHint.Size = new System.Drawing.Size(705, 46);
             this.textBoxNewHint.TabIndex = 2;
-            this.textBoxNewHint.TextChanged += new System.EventHandler(this.textBoxNewHint_TextChanged);
-            this.textBoxNewHint.Enter += new System.EventHandler(this.textBox_Enter);
-            this.textBoxNewHint.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxKeyDown);
-            this.textBoxNewHint.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBoxNewHint.TextChanged += new System.EventHandler(this.TextBoxNewHint_TextChanged);
+            this.textBoxNewHint.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.textBoxNewHint.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxKeyDown);
+            this.textBoxNewHint.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
             // textBoxNewQuestion
             // 
@@ -1370,10 +1370,10 @@
             this.textBoxNewQuestion.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBoxNewQuestion.Size = new System.Drawing.Size(705, 152);
             this.textBoxNewQuestion.TabIndex = 3;
-            this.textBoxNewQuestion.TextChanged += new System.EventHandler(this.textBoxNewQuestion_TextChanged);
-            this.textBoxNewQuestion.Enter += new System.EventHandler(this.textBox_Enter);
-            this.textBoxNewQuestion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxKeyDown);
-            this.textBoxNewQuestion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBoxNewQuestion.TextChanged += new System.EventHandler(this.TextBoxNewQuestion_TextChanged);
+            this.textBoxNewQuestion.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.textBoxNewQuestion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxKeyDown);
+            this.textBoxNewQuestion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
             // textBoxNewAnswer
             // 
@@ -1396,10 +1396,10 @@
             this.textBoxNewAnswer.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBoxNewAnswer.Size = new System.Drawing.Size(705, 152);
             this.textBoxNewAnswer.TabIndex = 1;
-            this.textBoxNewAnswer.TextChanged += new System.EventHandler(this.textBoxNewAnswer_TextChanged);
-            this.textBoxNewAnswer.Enter += new System.EventHandler(this.textBox_Enter);
-            this.textBoxNewAnswer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxKeyDown);
-            this.textBoxNewAnswer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBoxNewAnswer.TextChanged += new System.EventHandler(this.TextBoxNewAnswer_TextChanged);
+            this.textBoxNewAnswer.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.textBoxNewAnswer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxKeyDown);
+            this.textBoxNewAnswer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
             // tabPageExplorer
             // 
@@ -1433,7 +1433,7 @@
             this.tabPageExplorer.Size = new System.Drawing.Size(744, 596);
             this.tabPageExplorer.TabIndex = 4;
             this.tabPageExplorer.Text = "Test Yourself";
-            this.tabPageExplorer.Enter += new System.EventHandler(this.tabPageExplorer_Enter);
+            this.tabPageExplorer.Enter += new System.EventHandler(this.TabPageExplorer_Enter);
             // 
             // label28
             // 
@@ -1492,7 +1492,7 @@
             this.buttonShowHint.TabStop = false;
             this.buttonShowHint.Text = "Show/Hide Hint";
             this.buttonShowHint.UseVisualStyleBackColor = false;
-            this.buttonShowHint.Click += new System.EventHandler(this.buttonShowHint_Click);
+            this.buttonShowHint.Click += new System.EventHandler(this.ButtonShowHint_Click);
             // 
             // label13
             // 
@@ -1539,7 +1539,7 @@
             this.buttonDelete1.TabStop = false;
             this.buttonDelete1.Text = "Delete";
             this.buttonDelete1.UseVisualStyleBackColor = false;
-            this.buttonDelete1.Click += new System.EventHandler(this.buttonDelete1_Click);
+            this.buttonDelete1.Click += new System.EventHandler(this.ButtonDelete1_Click);
             // 
             // buttonSave1
             // 
@@ -1553,7 +1553,7 @@
             this.buttonSave1.TabStop = false;
             this.buttonSave1.Text = "Save";
             this.buttonSave1.UseVisualStyleBackColor = false;
-            this.buttonSave1.Click += new System.EventHandler(this.buttonSave1_Click);
+            this.buttonSave1.Click += new System.EventHandler(this.ButtonSave1_Click);
             // 
             // buttonFalse
             // 
@@ -1568,7 +1568,7 @@
             this.buttonFalse.TabStop = false;
             this.buttonFalse.Text = "Needs Work";
             this.buttonFalse.UseVisualStyleBackColor = false;
-            this.buttonFalse.Click += new System.EventHandler(this.buttonFalse_Click);
+            this.buttonFalse.Click += new System.EventHandler(this.ButtonFalse_Click);
             // 
             // buttonTrue
             // 
@@ -1583,7 +1583,7 @@
             this.buttonTrue.TabStop = false;
             this.buttonTrue.Text = "Correct";
             this.buttonTrue.UseVisualStyleBackColor = false;
-            this.buttonTrue.Click += new System.EventHandler(this.buttonTrue_Click);
+            this.buttonTrue.Click += new System.EventHandler(this.ButtonTrue_Click);
             // 
             // buttonShowAnswer
             // 
@@ -1597,7 +1597,7 @@
             this.buttonShowAnswer.TabStop = false;
             this.buttonShowAnswer.Text = "Show/Hide Answer";
             this.buttonShowAnswer.UseVisualStyleBackColor = false;
-            this.buttonShowAnswer.Click += new System.EventHandler(this.buttonShowAnswer_Click);
+            this.buttonShowAnswer.Click += new System.EventHandler(this.ButtonShowAnswer_Click);
             // 
             // label8
             // 
@@ -1624,8 +1624,8 @@
             this.textBoxAnswer.Size = new System.Drawing.Size(705, 152);
             this.textBoxAnswer.TabIndex = 10;
             this.textBoxAnswer.TabStop = false;
-            this.textBoxAnswer.Enter += new System.EventHandler(this.textBox_Enter);
-            this.textBoxAnswer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxKeyDown);
+            this.textBoxAnswer.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.textBoxAnswer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxKeyDown);
             // 
             // label9
             // 
@@ -1652,8 +1652,8 @@
             this.textBoxQuestion.Size = new System.Drawing.Size(705, 152);
             this.textBoxQuestion.TabIndex = 8;
             this.textBoxQuestion.TabStop = false;
-            this.textBoxQuestion.Enter += new System.EventHandler(this.textBox_Enter);
-            this.textBoxQuestion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxKeyDown);
+            this.textBoxQuestion.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.textBoxQuestion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxKeyDown);
             // 
             // labelRegDate
             // 
@@ -1728,7 +1728,7 @@
             this.tabPageSearch.TabIndex = 3;
             this.tabPageSearch.Text = "Search";
             this.tabPageSearch.UseVisualStyleBackColor = true;
-            this.tabPageSearch.Enter += new System.EventHandler(this.tabPageSearch_Enter);
+            this.tabPageSearch.Enter += new System.EventHandler(this.TabPageSearch_Enter);
             // 
             // checkBoxSearchInHint
             // 
@@ -1801,7 +1801,7 @@
             this.buttonSearchMoveToBox1.TabIndex = 9;
             this.buttonSearchMoveToBox1.Text = "Move to Box1";
             this.buttonSearchMoveToBox1.UseVisualStyleBackColor = true;
-            this.buttonSearchMoveToBox1.Click += new System.EventHandler(this.buttonSearchMoveToBox1_Click);
+            this.buttonSearchMoveToBox1.Click += new System.EventHandler(this.ButtonSearchMoveToBox1_Click);
             // 
             // buttonSearchDelete
             // 
@@ -1813,7 +1813,7 @@
             this.buttonSearchDelete.TabIndex = 10;
             this.buttonSearchDelete.Text = "Delete this word";
             this.buttonSearchDelete.UseVisualStyleBackColor = true;
-            this.buttonSearchDelete.Click += new System.EventHandler(this.buttonSearchDelete_Click);
+            this.buttonSearchDelete.Click += new System.EventHandler(this.ButtonSearchDelete_Click);
             // 
             // textBoxSearchAnswer
             // 
@@ -1829,8 +1829,8 @@
             this.textBoxSearchAnswer.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBoxSearchAnswer.Size = new System.Drawing.Size(360, 141);
             this.textBoxSearchAnswer.TabIndex = 7;
-            this.textBoxSearchAnswer.Enter += new System.EventHandler(this.textBox_Enter);
-            this.textBoxSearchAnswer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxKeyDown);
+            this.textBoxSearchAnswer.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.textBoxSearchAnswer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxKeyDown);
             // 
             // textBoxSearchQuestion
             // 
@@ -1846,8 +1846,8 @@
             this.textBoxSearchQuestion.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBoxSearchQuestion.Size = new System.Drawing.Size(359, 141);
             this.textBoxSearchQuestion.TabIndex = 6;
-            this.textBoxSearchQuestion.Enter += new System.EventHandler(this.textBox_Enter);
-            this.textBoxSearchQuestion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxKeyDown);
+            this.textBoxSearchQuestion.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.textBoxSearchQuestion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxKeyDown);
             // 
             // label1Search
             // 
@@ -1878,7 +1878,7 @@
             this.listViewSearch.TabIndex = 5;
             this.listViewSearch.UseCompatibleStateImageBehavior = false;
             this.listViewSearch.View = System.Windows.Forms.View.Details;
-            this.listViewSearch.SelectedIndexChanged += new System.EventHandler(this.listViewSearch_SelectedIndexChanged);
+            this.listViewSearch.SelectedIndexChanged += new System.EventHandler(this.ListViewSearch_SelectedIndexChanged);
             // 
             // QuestionColumn
             // 
@@ -1905,8 +1905,8 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(720, 46);
             this.textBoxSearch.TabIndex = 4;
-            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
-            this.textBoxSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxKeyDown);
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
+            this.textBoxSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxKeyDown);
             // 
             // tabPageStatistics
             // 
@@ -2804,7 +2804,7 @@
             this.ToolStripMenuItemDelete.Name = "ToolStripMenuItemDelete";
             this.ToolStripMenuItemDelete.Size = new System.Drawing.Size(141, 22);
             this.ToolStripMenuItemDelete.Text = "Delete ( Del )";
-            this.ToolStripMenuItemDelete.Click += new System.EventHandler(this.toolStripMenuItemDelete_Click);
+            this.ToolStripMenuItemDelete.Click += new System.EventHandler(this.ToolStripMenuItemDelete_Click);
             // 
             // toolStripSeparator2
             // 
@@ -2818,7 +2818,7 @@
             this.ToolStripMenuItemShiftLeft.Name = "ToolStripMenuItemShiftLeft";
             this.ToolStripMenuItemShiftLeft.Size = new System.Drawing.Size(141, 22);
             this.ToolStripMenuItemShiftLeft.Text = "Shift left";
-            this.ToolStripMenuItemShiftLeft.Click += new System.EventHandler(this.toolStripMenuItemShiftLeft_Click);
+            this.ToolStripMenuItemShiftLeft.Click += new System.EventHandler(this.ToolStripMenuItemShiftLeft_Click);
             // 
             // toolStripSeparator3
             // 
@@ -3120,7 +3120,7 @@
             this.ToolStripMenuItemExport.Name = "ToolStripMenuItemExport";
             this.ToolStripMenuItemExport.Size = new System.Drawing.Size(141, 22);
             this.ToolStripMenuItemExport.Text = "Export";
-            this.ToolStripMenuItemExport.Click += new System.EventHandler(this.toolStripMenuItemExport_Click);
+            this.ToolStripMenuItemExport.Click += new System.EventHandler(this.ToolStripMenuItemExport_Click);
             // 
             // saveFileDialog1
             // 
@@ -3129,7 +3129,7 @@
             // timer1
             // 
             this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // columnHeader1
             // 
@@ -3149,7 +3149,7 @@
             // timer2
             // 
             this.timer2.Interval = 300000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            this.timer2.Tick += new System.EventHandler(this.Timer2_Tick);
             // 
             // MainForm
             // 

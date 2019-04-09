@@ -188,20 +188,18 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 var fileInfo = new StackFrame(true);
-                error(ref fileInfo, ex.Message);
+                Error(ref fileInfo, ex.Message);
             }
         }
 
         private static int GetValidInt(string linePart)
         {
-            int validInt;
-            return Int32.TryParse(linePart, out validInt) ? validInt : 0;
+            return Int32.TryParse(linePart, out var validInt) ? validInt : 0;
         }
 
         private static int GetValidDisplayLocation(string LinePart)
         {
-            int ValidInt;
-            if (Int32.TryParse(LinePart, out ValidInt))
+            if (Int32.TryParse(LinePart, out var ValidInt))
             {
                 return ValidInt;
             }
@@ -213,8 +211,7 @@ namespace Leitner_Three
 
         private static string GetValidDate(string LinePart)
         {
-            DateTime ValidDate;
-            if (DateTime.TryParse(LinePart, out ValidDate))
+            if (DateTime.TryParse(LinePart, out var ValidDate))
             {
                 return ValidDate.ToString();
             }
@@ -265,12 +262,12 @@ namespace Leitner_Three
 
                 UpdateSQLSettings();
                 //SaveXml();
-                loadXML();
-                tabPageStatistics_Enter();
+                LoadXML();
+                TabPageStatistics_Enter();
             }
             if ((e.KeyCode == Keys.F3) && (Variables.LessonTableName != ""))
             {
-                primeBox1ToolStripMenuItem_Click(sender, e);
+                PrimeBox1ToolStripMenuItem_Click(sender, e);
             }
             else if ((e.KeyCode == Keys.F4) && (Variables.LessonTableName != ""))
             {
@@ -303,9 +300,9 @@ namespace Leitner_Three
                                 AutoPush("4");
                                 AutoPush("5");
                                 //successful( "Automatic Push", "Leitner Two has been updated" );
-                                tabPageStatistics_Enter();
+                                TabPageStatistics_Enter();
                                 //SaveXml();
-                                loadXML();
+                                LoadXML();
                             }
                         }
                         else
@@ -319,21 +316,21 @@ namespace Leitner_Three
                             AutoPush("4");
                             AutoPush("5");
                             //successful( "Automatic Push", "Leitner Two has been updated" );
-                            tabPageStatistics_Enter();
+                            TabPageStatistics_Enter();
                             //SaveXml();
-                            loadXML();
+                            LoadXML();
                         }
                     }
                     catch (Exception ex)
                     {
                         StackFrame file_info = new StackFrame(true);
-                        error(ref file_info, ex.Message);
+                        Error(ref file_info, ex.Message);
                     }
                 }
                 catch (Exception ex)
                 {
                     StackFrame file_info = new StackFrame(true);
-                    error(ref file_info, ex.Message);
+                    Error(ref file_info, ex.Message);
                 }
             }
             // NOTE: F5 should be reserved for debugging
@@ -345,10 +342,12 @@ namespace Leitner_Three
             else if ((e.KeyCode == Keys.F6) && (textBoxQuestion.Text != ""))
             {
                 labelAnswerToQuestionMessage.Text = @"";
-                ProcessStartInfo psi = new ProcessStartInfo();
-                psi.FileName = "H:\\OneDrive\\Visual Studio\\Composite Program Collection\\quickview\\QuickView\\bin\\Release\\QuickView.exe";
-                psi.WorkingDirectory = Environment.CurrentDirectory;
-                psi.Arguments = textBoxQuestion.Text;
+                ProcessStartInfo psi = new ProcessStartInfo
+                {
+                    FileName = "H:\\OneDrive\\Visual Studio\\Composite Program Collection\\quickview\\QuickView\\bin\\Release\\QuickView.exe",
+                    WorkingDirectory = Environment.CurrentDirectory,
+                    Arguments = textBoxQuestion.Text
+                };
                 Process proc = Process.Start(psi);
             }
             else if ((e.KeyCode == Keys.F7) && (textBoxAnswer.Text == ""))
@@ -359,10 +358,12 @@ namespace Leitner_Three
             else if ((e.KeyCode == Keys.F7) && (textBoxAnswer.Text != ""))
             {
                 labelAnswerToQuestionMessage.Text = @"";
-                ProcessStartInfo psi = new ProcessStartInfo();
-                psi.FileName = "H:\\OneDrive\\Visual Studio\\Composite Program Collection\\quickview\\QuickView\\bin\\Release\\QuickView.exe";
-                psi.WorkingDirectory = Environment.CurrentDirectory;
-                psi.Arguments = textBoxAnswer.Text;
+                ProcessStartInfo psi = new ProcessStartInfo
+                {
+                    FileName = "H:\\OneDrive\\Visual Studio\\Composite Program Collection\\quickview\\QuickView\\bin\\Release\\QuickView.exe",
+                    WorkingDirectory = Environment.CurrentDirectory,
+                    Arguments = textBoxAnswer.Text
+                };
                 Process proc = Process.Start(psi);
             }
             else if ((e.KeyCode == Keys.F12) && (Variables.LessonTableName != ""))
@@ -381,20 +382,20 @@ namespace Leitner_Three
 
                 DisplayLocationChanged();
                 //SaveXml();
-                loadXML();
-                tabPageStatistics_Enter();
+                LoadXML();
+                TabPageStatistics_Enter();
             }
             else if (e.KeyCode == Keys.S && e.Control && buttonShowAnswer.Enabled)
             {
-                buttonShowAnswer_Click(null, null);
+                ButtonShowAnswer_Click(null, null);
             }
             else if (e.KeyCode == Keys.T && e.Control && buttonTrue.Enabled)
             {
-                buttonTrue_Click(null, null);
+                ButtonTrue_Click(null, null);
             }
             else if (e.KeyCode == Keys.F && e.Control && buttonFalse.Enabled)
             {
-                buttonFalse_Click(null, null);
+                ButtonFalse_Click(null, null);
             }
         }
 
@@ -416,7 +417,7 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
                 return "";
             }
         }
@@ -429,7 +430,7 @@ namespace Leitner_Three
         bool answerIsActive = false;
         bool hintIsActive = false;
 
-        private void textBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             Variables.EnableAutoComplete = true;
             TextBox textBox = sender as TextBox;
@@ -465,7 +466,7 @@ namespace Leitner_Three
             }
         }
 
-        private void listBoxAutoComplete_DoubleClick(object sender, EventArgs e)
+        private void ListBoxAutoComplete_DoubleClick(object sender, EventArgs e)
         {
             try
             {
@@ -499,7 +500,7 @@ namespace Leitner_Three
             }
         }
 
-        private void textBoxKeyDown(object sender, KeyEventArgs e)
+        private void TextBoxKeyDown(object sender, KeyEventArgs e)
         {
             TextBox textBox = sender as TextBox;
             if (e.Control && e.KeyCode == Keys.A)
@@ -522,7 +523,7 @@ namespace Leitner_Three
             }
         }
 
-        private void textBox_Enter(object sender, EventArgs e)
+        private void TextBox_Enter(object sender, EventArgs e)
         {
             labelAddQuestionMessage.Text = "";
             labelAnswerToQuestionMessage.Text = "";
@@ -537,7 +538,7 @@ namespace Leitner_Three
 
         //#region Messages
 
-        private void error(ref StackFrame file_info, string errorMassage)
+        private void Error(ref StackFrame file_info, string errorMassage)
         {
             try
             {
@@ -549,7 +550,7 @@ namespace Leitner_Three
             catch { }
         }
 
-        private void successful(string title, string message)
+        private void Successful(string title, string message)
         {
             try
             {
@@ -564,7 +565,7 @@ namespace Leitner_Three
 
         //#region Load XML file and apply Setting
 
-        private void addNodesToTreeView()
+        private void AddNodesToTreeView()
         {
             treeView1.Nodes[0].Nodes.Clear();
 
@@ -627,7 +628,7 @@ namespace Leitner_Three
             }
         }
 
-        private void loadXML()
+        private void LoadXML()
         {
             if ((Variables.LessonTableName == null) || (Variables.LessonTableName == ""))
             {
@@ -704,7 +705,7 @@ namespace Leitner_Three
                         catch (Exception ex)
                         {
                             StackFrame file_info = new StackFrame(true);
-                            error(ref file_info, ex.Message);
+                            Error(ref file_info, ex.Message);
                         }
 
                         var n01Localsets = from S01 in Variables.SettingDataContext.Setting01s
@@ -804,7 +805,7 @@ namespace Leitner_Three
 
                 this.Text = Variables.Title + userName + @", (" + Variables.LessonName + @": " + Variables.LastStartTime + @") " + @"   Mode: " + Variables.RadioButtonText[Variables.Leitner.Setting[0].StudyMode + 1] + BuildStudyModeString();
 
-                addNodesToTreeView();
+                AddNodesToTreeView();
                 ApplySetting();
 
                 treeView1.Enabled = tabControl1.Enabled = true;
@@ -817,7 +818,7 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
                 treeView1.Enabled = tabControl1.Enabled = false;
 #if DEBUG
 #else
@@ -853,12 +854,12 @@ namespace Leitner_Three
 
                 //Variables.SavingLesson = false;
 
-                successful("Backup", "Your current Lessson has been backed up as an XML file");
+                Successful("Backup", "Your current Lessson has been backed up as an XML file");
             }
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
@@ -1520,7 +1521,7 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
@@ -1597,7 +1598,7 @@ namespace Leitner_Three
         /// This method is obsolete in the six-mode version and is currently unused
         /// </summary>
 
-        private bool addToXMLAndTreeView(ref int oldID, string boxID, string partID, string newQuestion, string newAnswer, string newGood, string newBad, string newHint, string date, bool selectDestinationTreeNode)
+        private bool AddToXMLAndTreeView(ref int oldID, string boxID, string partID, string newQuestion, string newAnswer, string newGood, string newBad, string newHint, string date, bool selectDestinationTreeNode)
         {
             try
             {
@@ -1652,7 +1653,7 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
                 return false;
             }
         }
@@ -1754,24 +1755,24 @@ namespace Leitner_Three
 
         //#region TabPages Enter Events
 
-        private void tabPageInsertWord_Enter(object sender, EventArgs e)
+        private void TabPageInsertWord_Enter(object sender, EventArgs e)
         {
             listBoxAutoComplete.Visible = false;
         }
 
-        private void tabPageExplorer_Enter(object sender, EventArgs e)
+        private void TabPageExplorer_Enter(object sender, EventArgs e)
         {
             labelAnswerToQuestionMessage.Text = "";
             Variables.EnableAutoComplete = false;
             listBoxAutoComplete.Visible = false;
         }
 
-        private void tabPageStatistics_Enter(object sender, EventArgs e)
+        private void TabPageStatistics_Enter(object sender, EventArgs e)
         {
-            tabPageStatistics_Enter();
+            TabPageStatistics_Enter();
         }
 
-        private void tabPageStatistics_Enter()
+        private void TabPageStatistics_Enter()
         {
             var sTotalP1 = 0;
             var sTotalP2 = 0;
@@ -2041,11 +2042,11 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 var fileInfo = new StackFrame(true);
-                error(ref fileInfo, ex.Message);
+                Error(ref fileInfo, ex.Message);
             }
         }
 
-        private void tabPageSearch_Enter(object sender, EventArgs e)
+        private void TabPageSearch_Enter(object sender, EventArgs e)
         {
             Variables.EnableAutoComplete = false;
             listBoxAutoComplete.Visible = false;
@@ -2068,7 +2069,7 @@ namespace Leitner_Three
 
         //#region Buttons
 
-        private void buttonAddNewWord_Click(object sender, EventArgs e)
+        private void ButtonAddNewWord_Click(object sender, EventArgs e)
         {
             if (Variables.LessonTableName == "")
                 return;
@@ -2092,11 +2093,7 @@ namespace Leitner_Three
                     return;
                 }
 
-                string strSide1;
-                string strSide2;
-                string strSide3;
-
-                SetSideStrings(out strSide1, out strSide2, out strSide3);
+                SetSideStrings(out string strSide1, out var strSide2, out var strSide3);
 
                 var duplicates = (from q in Variables.Leitner.ToLearn
                                   where q.Side1.ToLower() == strSide1.ToLower()
@@ -2160,11 +2157,11 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
 
             // Update the stats page for the new entry
-            tabPageStatistics_Enter();
+            TabPageStatistics_Enter();
 
             //SaveXml();
         }
@@ -2215,7 +2212,7 @@ namespace Leitner_Three
             }
         }
 
-        private void buttonDelete1_Click(object sender, EventArgs e)
+        private void ButtonDelete1_Click(object sender, EventArgs e)
         {
             LeitnerBox.ToLearnRow WorkingSelectedItem = this._selectedItem;
             try
@@ -2230,7 +2227,7 @@ namespace Leitner_Three
 
                 OnestudyItemDeleted(ID);
                 //SaveXml();
-                loadXML();
+                LoadXML();
 
                 //treeView1.Nodes.Find("Word" + id, true).First().Remove();
 
@@ -2239,11 +2236,11 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
-        private void buttonSave1_Click(object sender, EventArgs e)
+        private void ButtonSave1_Click(object sender, EventArgs e)
         {
             LeitnerBox.ToLearnRow workingSelectedItem = this._selectedItem;
             try
@@ -2282,11 +2279,11 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
-        private void buttonFalse_Click(object sender, EventArgs e)
+        private void ButtonFalse_Click(object sender, EventArgs e)
         {
             var workingSelectedItem = this._selectedItem;
             buttonTrue.Enabled = false;
@@ -2338,13 +2335,13 @@ namespace Leitner_Three
             {
                 labelAnswerToQuestionMessage.Text = @"Error";
                 var fileInfo = new StackFrame(true);
-                error(ref fileInfo, ex.Message);
+                Error(ref fileInfo, ex.Message);
             }
             OneRecordChanged(workingSelectedItem);
             //SaveXml();
         }
 
-        private void buttonTrue_Click(object sender, EventArgs e)
+        private void ButtonTrue_Click(object sender, EventArgs e)
         {
             buttonTrue.Enabled = false;
             buttonFalse.Enabled = false;
@@ -2393,7 +2390,7 @@ namespace Leitner_Three
                         AddToTreeView(@"2", @"2", GetValidInt(wordId), goodcount, badcount);
                         SetDisplayLocation(2, workingSelectedItem);
                         DisplayLocationChanged(workingSelectedItem);
-                        tabPageStatistics_Enter();
+                        TabPageStatistics_Enter();
                         labelAnswerToQuestionMessage.Text = @"Moved to Box2 Part2";
 
                         break;
@@ -2404,7 +2401,7 @@ namespace Leitner_Three
                         treeView1.Nodes.Find(@"Word" + wordId, true).First().Remove();
                         SetDisplayLocation(7, workingSelectedItem);
                         DisplayLocationChanged(workingSelectedItem);
-                        tabPageStatistics_Enter();
+                        TabPageStatistics_Enter();
                         AddToTreeView(@"3", @"5", GetValidInt(wordId), goodcount, badcount);
                         labelAnswerToQuestionMessage.Text = @"Moved to Box3 Part5";
 
@@ -2415,7 +2412,7 @@ namespace Leitner_Three
                         treeView1.Nodes.Find(@"Word" + wordId, true).First().Remove();
                         SetDisplayLocation(15, workingSelectedItem);
                         DisplayLocationChanged(workingSelectedItem);
-                        tabPageStatistics_Enter();
+                        TabPageStatistics_Enter();
                         AddToTreeView(@"4", @"8", GetValidInt(wordId), goodcount, badcount);
                         labelAnswerToQuestionMessage.Text = @"Moved to Box4 Part8";
 
@@ -2426,7 +2423,7 @@ namespace Leitner_Three
                         treeView1.Nodes.Find(@"Word" + wordId, true).First().Remove();
                         SetDisplayLocation(29, workingSelectedItem);
                         DisplayLocationChanged(workingSelectedItem);
-                        tabPageStatistics_Enter();
+                        TabPageStatistics_Enter();
                         AddToTreeView(@"5", @"14", GetValidInt(wordId), goodcount, badcount);
 
                         break;
@@ -2451,13 +2448,13 @@ namespace Leitner_Three
             {
                 labelAnswerToQuestionMessage.Text = "Error";
                 var fileInfo = new StackFrame(true);
-                error(ref fileInfo, ex.Message);
+                Error(ref fileInfo, ex.Message);
             }
             OneRecordChanged(workingSelectedItem);
             //SendKeys.Send(@"\t");
         }
 
-        private void buttonSearchSave_Click(object sender, EventArgs e)
+        private void ButtonSearchSave_Click(object sender, EventArgs e)
         {
             LeitnerBox.ToLearnRow WorkingSelectedItem = this._selectedItem;
             try
@@ -2483,11 +2480,11 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
-        private void buttonSearchMoveToBox1_Click(object sender, EventArgs e)
+        private void ButtonSearchMoveToBox1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -2528,7 +2525,7 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
 
             //SaveXml();
@@ -2543,7 +2540,7 @@ namespace Leitner_Three
             //}
         }
 
-        private void buttonSearchDelete_Click(object sender, EventArgs e)
+        private void ButtonSearchDelete_Click(object sender, EventArgs e)
         {
             try
             {
@@ -2587,11 +2584,11 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
-        private void buttonShowAnswer_Click(object sender, EventArgs e)
+        private void ButtonShowAnswer_Click(object sender, EventArgs e)
         {
             if (Variables.LessonTableName == "")
                 return;
@@ -2613,20 +2610,20 @@ namespace Leitner_Three
                     // This piece of code is a short-cut for students of Chinese
                     if ((Variables.Leitner.Setting[0].StudyMode == 0 || Variables.Leitner.Setting[0].StudyMode == 5) && (textIsThisRight.Text == textBoxAnswer.Text))
                     {
-                        buttonTrue_Click(sender, e);
+                        ButtonTrue_Click(sender, e);
                         //SendKeys.Send(@"\t");
                         return;    
                     }
 #endif
                     textBoxHint.Enabled = false;
                     textBoxHint.Text = GetHint(workingSelectedItem);
-                    buttonShowHint_Click(sender, e);
-                    typing.Text = expandCangJei(workingSelectedItem.Side2);
+                    ButtonShowHint_Click(sender, e);
+                    typing.Text = ExpandCangJei(workingSelectedItem.Side2);
                 }
                 catch (Exception ex)
                 {
                     var fileInfo = new StackFrame(true);
-                    error(ref fileInfo, ex.Message);
+                    Error(ref fileInfo, ex.Message);
                 }
             }
             else
@@ -2642,12 +2639,12 @@ namespace Leitner_Three
                 catch (Exception ex)
                 {
                     var fileInfo = new StackFrame(true);
-                    error(ref fileInfo, ex.Message);
+                    Error(ref fileInfo, ex.Message);
                 }
             }
         }
 
-        private void buttonShowHint_Click(object sender, EventArgs e)
+        private void ButtonShowHint_Click(object sender, EventArgs e)
         {
             if (Variables.LessonTableName == "") return;
 
@@ -2673,7 +2670,7 @@ namespace Leitner_Three
                 catch (Exception ex)
                 {
                     StackFrame file_info = new StackFrame(true);
-                    error(ref file_info, ex.Message);
+                    Error(ref file_info, ex.Message);
                 }
             }
         }
@@ -2682,7 +2679,7 @@ namespace Leitner_Three
 
         //#region Search Methods
 
-        private string expandCangJei(string Side2)
+        private string ExpandCangJei(string Side2)
         {
             StringBuilder WorkingWork = new StringBuilder();
 
@@ -2734,13 +2731,13 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
                 return "";
             }
         }
 
 
-        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        private void TextBoxSearch_TextChanged(object sender, EventArgs e)
         {
             if (Variables.LessonTableName == "")
                 return;
@@ -3078,22 +3075,23 @@ namespace Leitner_Three
                 foreach (var item in items)
                 {
                     ListViewItem LVitem = new ListViewItem(new string[]
-						{ GetQuestion(item),
-						  GetAnswer(item),
-						  GetHint(item)});
-
-                    LVitem.Name = "Item" + item.Id;
+                        { GetQuestion(item),
+                          GetAnswer(item),
+                          GetHint(item)})
+                    {
+                        Name = "Item" + item.Id
+                    };
                     listViewSearch.Items.Add(LVitem);
                 }
             }
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
-        private void listViewSearch_SelectedIndexChanged(object sender, EventArgs e)
+        private void ListViewSearch_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
@@ -3139,7 +3137,7 @@ namespace Leitner_Three
             }
         }
 
-        private void textBoxNewQuestion_TextChanged(object sender, EventArgs e)
+        private void TextBoxNewQuestion_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -3155,10 +3153,7 @@ namespace Leitner_Three
                     return;
                 }
 
-                string strSide1;
-                string strSide2;
-                string strSide3;
-                SetSideStrings(out strSide1, out strSide2, out strSide3);
+                SetSideStrings(out string strSide1, out string strSide2, out var strSide3);
 
                 EnumerableRowCollection<Leitner_Three.LeitnerBox.ToLearnRow> questions = null; //= ( from q in Variables.Leitner.ToLearn
 
@@ -3592,7 +3587,7 @@ namespace Leitner_Three
             return questions;
         }
 
-        private void textBoxNewAnswer_TextChanged(object sender, EventArgs e)
+        private void TextBoxNewAnswer_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -3608,10 +3603,7 @@ namespace Leitner_Three
                     return;
                 }
 
-                string strSide1;
-                string strSide2;
-                string strSide3;
-                SetSideStrings(out strSide1, out strSide2, out strSide3);
+                SetSideStrings(out string strSide1, out string strSide2, out var strSide3);
 
                 EnumerableRowCollection<Leitner_Three.LeitnerBox.ToLearnRow> questions = null;
 
@@ -3644,7 +3636,7 @@ namespace Leitner_Three
 
         //#region TreeView
 
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        private void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             // This event is useless at startup; there is no XML file loaded yet.
             if (Variables.LessonTableName == "") return;
@@ -3876,7 +3868,7 @@ namespace Leitner_Three
                             string bad = GetBadCount(question).ToString();
                             string hint = GetHint(question);
                             textBoxNewHint.Text = hint;
-                            newtyping.Text = expandCangJei(question.Side2);
+                            newtyping.Text = ExpandCangJei(question.Side2);
                             //Register date
                             if (ToolStripMenuItemPersianDate.Checked)
                                 labelRegDate.Text = ComputePersianDate(DateTime.Parse(GetTestDate(question)));
@@ -3901,7 +3893,7 @@ namespace Leitner_Three
                 catch (Exception ex)
                 {
                     StackFrame file_info = new StackFrame(true);
-                    error(ref file_info, ex.Message);
+                    Error(ref file_info, ex.Message);
                     textBoxQuestion.Text = "";
                     typing.Text = "";
                 }
@@ -3911,22 +3903,19 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
             this._selectedItem = WorkingSelectedItem;
         }
 
         private static int CalcDisplayLocation(string boxID, string partID)
         {
-            int intBoxNumber;
-            int intPartNumber;
-
-            if (!Int32.TryParse(boxID, out intBoxNumber))
+            if (!Int32.TryParse(boxID, out var intBoxNumber))
             {
                 intBoxNumber = 6;
             }
 
-            if (!Int32.TryParse(partID, out intPartNumber))
+            if (!Int32.TryParse(partID, out var intPartNumber))
             {
                 intPartNumber = 0;
             }
@@ -3963,7 +3952,7 @@ namespace Leitner_Three
             return 30;
         }
 
-        private void treeView1_MouseClick(object sender, MouseEventArgs e)
+        private void TreeView1_MouseClick(object sender, MouseEventArgs e)
         {
             // This event is useless at startup; there is no XML file loaded
             if (Variables.LessonTableName == "") return;
@@ -4004,7 +3993,7 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 var fileInfo = new StackFrame(true);
-                error(ref fileInfo, ex.Message);
+                Error(ref fileInfo, ex.Message);
             }
         }
 
@@ -4014,7 +4003,7 @@ namespace Leitner_Three
 
         //#region MenuStrip
 
-        private void renumberXmlFileToolStripMenuItem_Click(object sender, EventArgs e)
+        private void RenumberXmlFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Variables.LessonTableName == "")
                 return;
@@ -4119,20 +4108,20 @@ namespace Leitner_Three
                 //MemToSQL();
 
                 //addNodesToTreeView();
-                loadXML();
+                LoadXML();
 
-                successful("Renumbering", "The elements have been renumbered successfully");
+                Successful("Renumbering", "The elements have been renumbered successfully");
                 this.Cursor = Cursors.Default;
             }
             catch (Exception ex)
             {
                 this.Cursor = Cursors.Default;
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Variables.Reading != null)
             {
@@ -4169,7 +4158,7 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
@@ -4191,7 +4180,7 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
@@ -4225,7 +4214,7 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
@@ -4259,7 +4248,7 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
@@ -4290,7 +4279,7 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
@@ -4326,7 +4315,7 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
@@ -4353,7 +4342,7 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
@@ -4390,11 +4379,11 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
-        private void exportAllWordsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExportAllWordsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Variables.LessonTableName == "")
                 return;
@@ -4403,16 +4392,16 @@ namespace Leitner_Three
                 if (saveFileDialog1.ShowDialog() != DialogResult.OK) return;
                 this.Cursor = Cursors.WaitCursor;
 
-                exportWords(saveFileDialog1.FileName, "Replace");
+                ExportWords(saveFileDialog1.FileName, "Replace");
 
                 this.Cursor = Cursors.Default;
-                successful("Item Saving", "The Items have been saved successfully");
+                Successful("Item Saving", "The Items have been saved successfully");
             }
             catch (Exception ex)
             {
                 this.Cursor = Cursors.Default;
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
@@ -4427,8 +4416,8 @@ namespace Leitner_Three
             //SaveXml();
             NewLesson newLesson = new NewLesson();
             newLesson.ShowDialog();
-            loadXML();
-            tabPageStatistics_Enter(sender, e);
+            LoadXML();
+            TabPageStatistics_Enter(sender, e);
         }
 
         private void ToolStripMenuItemSelectLesson_Click(object sender, EventArgs e)
@@ -4445,13 +4434,13 @@ namespace Leitner_Three
                 }
                 labelBoxID.Text = null;
                 labelPartID.Text = null;
-                loadXML();
-                tabPageStatistics_Enter(sender, e);
+                LoadXML();
+                TabPageStatistics_Enter(sender, e);
             }
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
@@ -4519,12 +4508,12 @@ namespace Leitner_Three
             //SaveXml();
             try
             {
-                tabPageStatistics_Enter(sender, e);
+                TabPageStatistics_Enter(sender, e);
             }
             catch (Exception ex)
             {
                 var fileInfo = new StackFrame(true);
-                error(ref fileInfo, ex.Message);
+                Error(ref fileInfo, ex.Message);
             }
         }
 
@@ -4534,7 +4523,7 @@ namespace Leitner_Three
 
         //#region ContextMenuStrip
 
-        private void toolStripMenuItemDelete_Click(object sender, EventArgs e)
+        private void ToolStripMenuItemDelete_Click(object sender, EventArgs e)
         {
             LeitnerBox.ToLearnRow WorkingSelectedItem = this._selectedItem;
             try
@@ -4546,16 +4535,16 @@ namespace Leitner_Three
                 treeView1.SelectedNode.Remove();
 
                 //SaveXml();
-                tabPageStatistics_Enter(sender, e);
+                TabPageStatistics_Enter(sender, e);
             }
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
-        private void toolStripMenuItemShiftLeft_Click(object sender, EventArgs e)
+        private void ToolStripMenuItemShiftLeft_Click(object sender, EventArgs e)
         {
             try
             {
@@ -4577,18 +4566,18 @@ namespace Leitner_Three
                         break;
                 }
 
-                tabPageStatistics_Enter(sender, e);
+                TabPageStatistics_Enter(sender, e);
 
-                loadXML();
+                LoadXML();
             }
             catch (Exception ex)
             {
                 var fileInfo = new StackFrame(true);
-                error(ref fileInfo, ex.Message);
+                Error(ref fileInfo, ex.Message);
             }
         }
 
-        private void toolStripMenuItemExport_Click(object sender, EventArgs e)
+        private void ToolStripMenuItemExport_Click(object sender, EventArgs e)
         {
             if (Variables.LessonTableName == "")
             {
@@ -4598,18 +4587,18 @@ namespace Leitner_Three
             {
                 if (saveFileDialog1.ShowDialog() != DialogResult.OK) return;
 
-                exportWords(saveFileDialog1.FileName, "Append");
+                ExportWords(saveFileDialog1.FileName, "Append");
 
-                successful("File Saving", "The file has been saved successfully");
+                Successful("File Saving", "The file has been saved successfully");
             }
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
-        private void exportWords(string filename, string method)
+        private void ExportWords(string filename, string method)
         {
             FileStream Writing;
             if (method == "Append")
@@ -4685,14 +4674,14 @@ namespace Leitner_Three
 
         //#region Timer
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             labelNewWordDate.Text = ToolStripMenuItemPersianDate.Checked ? ComputePersianDate(DateTime.Now) : DateTime.Now.ToString(CultureInfo.InvariantCulture);
         }
 
         //#endregion Timer
 
-        private void sectionToolStripMenuItemSection_Click(object sender, EventArgs e)
+        private void SectionToolStripMenuItemSection_Click(object sender, EventArgs e)
         {
             try
             {
@@ -4702,7 +4691,7 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 var fileInfo = new StackFrame(true);
-                error(ref fileInfo, ex.Message);
+                Error(ref fileInfo, ex.Message);
             }
         }
 
@@ -4780,7 +4769,7 @@ namespace Leitner_Three
                             SetDisplayLocation(GetDisplayLocation(item) - 1, item);
 
                             DisplayLocationChanged(item);
-                            tabPageStatistics_Enter();
+                            TabPageStatistics_Enter();
                             break;
                         }
                         indexOldest++;
@@ -5122,7 +5111,7 @@ namespace Leitner_Three
             }
         }
 
-        private void primeBox1ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PrimeBox1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Variables.LessonTableName == "")
                 return;
@@ -5200,7 +5189,7 @@ namespace Leitner_Three
                         SetDisplayLocation(0, newDisplay);
 
                         DisplayLocationChanged(newDisplay);
-                        tabPageStatistics_Enter();
+                        TabPageStatistics_Enter();
                     }
                 }
             }
@@ -5208,9 +5197,9 @@ namespace Leitner_Three
             {
                 this.Cursor = Cursors.Default;
                 var fileInfo = new StackFrame(true);
-                error(ref fileInfo, ex.Message);
+                Error(ref fileInfo, ex.Message);
             }
-            tabPageStatistics_Enter(sender, e);
+            TabPageStatistics_Enter(sender, e);
         }
 
         private static void RecordIdChanged(LeitnerBox.ToLearnRow changedRecord, int newId)
@@ -5404,36 +5393,37 @@ namespace Leitner_Three
         {
             using (Variables.LessonDataContext = LeitnerLessonsDataContext.GetLessonContext(Variables.LessonTableName))
             {
-                Lesson01 n01set = new Lesson01();
-
-                n01set.Id = SomethingChanged.Id;
-                n01set.Side1 = SomethingChanged.Side1;
-                n01set.Side2 = SomethingChanged.Side2;
-                n01set.Side3 = SomethingChanged.Side3;
-                n01set.A_B_GoodCount = SomethingChanged.A_B_GoodCount;
-                n01set.A_C_GoodCount = SomethingChanged.A_C_GoodCount;
-                n01set.B_A_GoodCount = SomethingChanged.B_A_GoodCount;
-                n01set.B_C_GoodCount = SomethingChanged.B_C_GoodCount;
-                n01set.C_A_GoodCount = SomethingChanged.C_A_GoodCount;
-                n01set.C_B_GoodCount = SomethingChanged.C_B_GoodCount;
-                n01set.A_B_BadCount = SomethingChanged.A_B_BadCount;
-                n01set.A_C_BadCount = SomethingChanged.A_C_BadCount;
-                n01set.B_A_BadCount = SomethingChanged.B_A_BadCount;
-                n01set.B_C_BadCount = SomethingChanged.B_C_BadCount;
-                n01set.C_A_BadCount = SomethingChanged.C_A_BadCount;
-                n01set.C_B_BadCount = SomethingChanged.C_B_BadCount;
-                n01set.A_B_DisplayLocation = SomethingChanged.A_B_DisplayLocation;
-                n01set.A_C_DisplayLocation = SomethingChanged.A_C_DisplayLocation;
-                n01set.B_A_DisplayLocation = SomethingChanged.B_A_DisplayLocation;
-                n01set.B_C_DisplayLocation = SomethingChanged.B_C_DisplayLocation;
-                n01set.C_A_DisplayLocation = SomethingChanged.C_A_DisplayLocation;
-                n01set.C_B_DisplayLocation = SomethingChanged.C_B_DisplayLocation;
-                n01set.A_B_TestDate = SomethingChanged.A_B_TestDate;
-                n01set.A_C_TestDate = SomethingChanged.A_C_TestDate;
-                n01set.B_A_TestDate = SomethingChanged.B_A_TestDate;
-                n01set.B_C_TestDate = SomethingChanged.B_C_TestDate;
-                n01set.C_A_TestDate = SomethingChanged.C_A_TestDate;
-                n01set.C_B_TestDate = SomethingChanged.C_B_TestDate;
+                Lesson01 n01set = new Lesson01
+                {
+                    Id = SomethingChanged.Id,
+                    Side1 = SomethingChanged.Side1,
+                    Side2 = SomethingChanged.Side2,
+                    Side3 = SomethingChanged.Side3,
+                    A_B_GoodCount = SomethingChanged.A_B_GoodCount,
+                    A_C_GoodCount = SomethingChanged.A_C_GoodCount,
+                    B_A_GoodCount = SomethingChanged.B_A_GoodCount,
+                    B_C_GoodCount = SomethingChanged.B_C_GoodCount,
+                    C_A_GoodCount = SomethingChanged.C_A_GoodCount,
+                    C_B_GoodCount = SomethingChanged.C_B_GoodCount,
+                    A_B_BadCount = SomethingChanged.A_B_BadCount,
+                    A_C_BadCount = SomethingChanged.A_C_BadCount,
+                    B_A_BadCount = SomethingChanged.B_A_BadCount,
+                    B_C_BadCount = SomethingChanged.B_C_BadCount,
+                    C_A_BadCount = SomethingChanged.C_A_BadCount,
+                    C_B_BadCount = SomethingChanged.C_B_BadCount,
+                    A_B_DisplayLocation = SomethingChanged.A_B_DisplayLocation,
+                    A_C_DisplayLocation = SomethingChanged.A_C_DisplayLocation,
+                    B_A_DisplayLocation = SomethingChanged.B_A_DisplayLocation,
+                    B_C_DisplayLocation = SomethingChanged.B_C_DisplayLocation,
+                    C_A_DisplayLocation = SomethingChanged.C_A_DisplayLocation,
+                    C_B_DisplayLocation = SomethingChanged.C_B_DisplayLocation,
+                    A_B_TestDate = SomethingChanged.A_B_TestDate,
+                    A_C_TestDate = SomethingChanged.A_C_TestDate,
+                    B_A_TestDate = SomethingChanged.B_A_TestDate,
+                    B_C_TestDate = SomethingChanged.B_C_TestDate,
+                    C_A_TestDate = SomethingChanged.C_A_TestDate,
+                    C_B_TestDate = SomethingChanged.C_B_TestDate
+                };
 
                 Variables.LessonDataContext.Lesson01s.InsertOnSubmit(n01set);
                 Variables.LessonDataContext.SubmitChanges();
@@ -5551,7 +5541,7 @@ namespace Leitner_Three
             return 0;
         }
 
-        private void buttonSave2_Click(object sender, EventArgs e)
+        private void ButtonSave2_Click(object sender, EventArgs e)
         {
             if (Variables.LessonTableName == "")
                 return;
@@ -5588,7 +5578,7 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
@@ -5646,12 +5636,10 @@ namespace Leitner_Three
                     for (int shuttle = top + 1; shuttle <= size; shuttle++)
                     {
                         // working DateTime variables
-                        DateTime upper;
-                        DateTime lower;
 
                         // Convert string date to DateTime (or crash if it cannot be convertd)
-                        if (!DateTime.TryParse(sortable[top, 1], out upper)) { throw new InvalidDataException(); }
-                        if (!DateTime.TryParse(sortable[shuttle, 1], out lower)) { throw new InvalidDataException(); }
+                        if (!DateTime.TryParse(sortable[top, 1], out var upper)) { throw new InvalidDataException(); }
+                        if (!DateTime.TryParse(sortable[shuttle, 1], out var lower)) { throw new InvalidDataException(); }
 
                         if (lower < upper)
                         {
@@ -5675,7 +5663,7 @@ namespace Leitner_Three
             {
                 this.Cursor = Cursors.Default;
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
                 return false;
             }
         }
@@ -5684,7 +5672,7 @@ namespace Leitner_Three
         {
         }
 
-        private void side1Side2ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Side1Side2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Variables.LessonTableName == "")
                 return;
@@ -5696,11 +5684,11 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
-        private void side1Side3ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Side1Side3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Variables.LessonTableName == "")
                 return;
@@ -5712,11 +5700,11 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
-        private void side2Side1ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Side2Side1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Variables.LessonTableName == "")
                 return;
@@ -5728,11 +5716,11 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
-        private void side2Side3ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Side2Side3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Variables.LessonTableName == "")
                 return;
@@ -5744,11 +5732,11 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
-        private void side3Side1ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Side3Side1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Variables.LessonTableName == "")
                 return;
@@ -5760,11 +5748,11 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
-        private void side3Side2ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Side3Side2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Variables.LessonTableName == "")
                 return;
@@ -5776,11 +5764,11 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
-        private void selectStudyModeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SelectStudyModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Variables.LessonTableName == "")
                 return;
@@ -5794,7 +5782,7 @@ namespace Leitner_Three
                 if (Variables.LessonTableName != "")
                 {
                     //addNodesToTreeView();
-                    tabPageStatistics_Enter();
+                    TabPageStatistics_Enter();
 
                     int CurrentStudyMode = Variables.Leitner.Setting[0].StudyMode;
                     if (PreviousStudyMode != CurrentStudyMode)
@@ -5802,17 +5790,17 @@ namespace Leitner_Three
                         UpdateSQLSettings();
                     //SaveXml();
 
-                    loadXML();
+                    LoadXML();
                 }
             }
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
-        private void textBoxNewHint_TextChanged(object sender, EventArgs e)
+        private void TextBoxNewHint_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -5828,10 +5816,7 @@ namespace Leitner_Three
                     return;
                 }
 
-                string strSide1;
-                string strSide2;
-                string strSide3;
-                SetSideStrings(out strSide1, out strSide2, out strSide3);
+                SetSideStrings(out string strSide1, out string strSide2, out var strSide3);
 
                 EnumerableRowCollection<Leitner_Three.LeitnerBox.ToLearnRow> questions = null;
 
@@ -5898,12 +5883,12 @@ namespace Leitner_Three
             }
         }
 
-        private void timer2_Tick(object sender, EventArgs e)
+        private void Timer2_Tick(object sender, EventArgs e)
         {
             //SaveXml();
         }
 
-        private void sideNamesAndStudySequenceToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SideNamesAndStudySequenceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Variables.LessonTableName == "")
                 return;
@@ -5915,7 +5900,7 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
@@ -5941,27 +5926,27 @@ namespace Leitner_Three
             return StudyString;
         }
 
-        private void f2NextModeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void F2NextModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SendKeys.Send("{F2}");
         }
 
-        private void f3PrimeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void F3PrimeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SendKeys.Send("{F3}");
         }
 
-        private void f4AutoAgeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void F4AutoAgeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SendKeys.Send("{F4}");
         }
 
-        private void f12ArchiveToolStripMenuItem_Click(object sender, EventArgs e)
+        private void F12ArchiveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SendKeys.Send("{F12}");
         }
 
-        private void textCh_TextChanged(object sender, EventArgs e)
+        private void TextCh_TextChanged(object sender, EventArgs e)
         {
             if (textCh.Text.Length != 1)
             {
@@ -6058,7 +6043,7 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
@@ -6106,36 +6091,37 @@ namespace Leitner_Three
 
                 foreach (var n01Item in n01Items)
                 {
-                    Lesson01 working = new Lesson01();
-
-                    working.Id = n01Item.Id;
-                    working.Side1 = n01Item.Side1;
-                    working.Side2 = n01Item.Side2;
-                    working.Side3 = n01Item.Side3;
-                    working.A_B_GoodCount = n01Item.A_B_GoodCount;
-                    working.A_C_GoodCount = n01Item.A_C_GoodCount;
-                    working.B_A_GoodCount = n01Item.B_A_GoodCount;
-                    working.B_C_GoodCount = n01Item.B_C_GoodCount;
-                    working.C_A_GoodCount = n01Item.C_A_GoodCount;
-                    working.C_B_GoodCount = n01Item.C_B_GoodCount;
-                    working.A_B_BadCount = n01Item.A_B_BadCount;
-                    working.A_C_BadCount = n01Item.A_C_BadCount;
-                    working.B_A_BadCount = n01Item.B_A_BadCount;
-                    working.B_C_BadCount = n01Item.B_C_BadCount;
-                    working.C_A_BadCount = n01Item.C_A_BadCount;
-                    working.C_B_BadCount = n01Item.C_B_BadCount;
-                    working.A_B_DisplayLocation = n01Item.A_B_DisplayLocation;
-                    working.A_C_DisplayLocation = n01Item.A_C_DisplayLocation;
-                    working.B_A_DisplayLocation = n01Item.B_A_DisplayLocation;
-                    working.B_C_DisplayLocation = n01Item.B_C_DisplayLocation;
-                    working.C_A_DisplayLocation = n01Item.C_A_DisplayLocation;
-                    working.C_B_DisplayLocation = n01Item.C_B_DisplayLocation;
-                    working.A_B_TestDate = n01Item.A_B_TestDate;
-                    working.A_C_TestDate = n01Item.A_C_TestDate;
-                    working.B_A_TestDate = n01Item.B_A_TestDate;
-                    working.B_C_TestDate = n01Item.B_C_TestDate;
-                    working.C_A_TestDate = n01Item.C_A_TestDate;
-                    working.C_B_TestDate = n01Item.C_B_TestDate;
+                    Lesson01 working = new Lesson01
+                    {
+                        Id = n01Item.Id,
+                        Side1 = n01Item.Side1,
+                        Side2 = n01Item.Side2,
+                        Side3 = n01Item.Side3,
+                        A_B_GoodCount = n01Item.A_B_GoodCount,
+                        A_C_GoodCount = n01Item.A_C_GoodCount,
+                        B_A_GoodCount = n01Item.B_A_GoodCount,
+                        B_C_GoodCount = n01Item.B_C_GoodCount,
+                        C_A_GoodCount = n01Item.C_A_GoodCount,
+                        C_B_GoodCount = n01Item.C_B_GoodCount,
+                        A_B_BadCount = n01Item.A_B_BadCount,
+                        A_C_BadCount = n01Item.A_C_BadCount,
+                        B_A_BadCount = n01Item.B_A_BadCount,
+                        B_C_BadCount = n01Item.B_C_BadCount,
+                        C_A_BadCount = n01Item.C_A_BadCount,
+                        C_B_BadCount = n01Item.C_B_BadCount,
+                        A_B_DisplayLocation = n01Item.A_B_DisplayLocation,
+                        A_C_DisplayLocation = n01Item.A_C_DisplayLocation,
+                        B_A_DisplayLocation = n01Item.B_A_DisplayLocation,
+                        B_C_DisplayLocation = n01Item.B_C_DisplayLocation,
+                        C_A_DisplayLocation = n01Item.C_A_DisplayLocation,
+                        C_B_DisplayLocation = n01Item.C_B_DisplayLocation,
+                        A_B_TestDate = n01Item.A_B_TestDate,
+                        A_C_TestDate = n01Item.A_C_TestDate,
+                        B_A_TestDate = n01Item.B_A_TestDate,
+                        B_C_TestDate = n01Item.B_C_TestDate,
+                        C_A_TestDate = n01Item.C_A_TestDate,
+                        C_B_TestDate = n01Item.C_B_TestDate
+                    };
 
                     Variables.LessonDataContext.Lesson01s.InsertOnSubmit(working);
                 }
@@ -6144,12 +6130,12 @@ namespace Leitner_Three
             }
         }
 
-        private void backupLessonToolStripMenuItem_Click(object sender, EventArgs e)
+        private void BackupLessonToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveXml();
         }
 
-        private void backupFilePathToolStripMenuItem_Click(object sender, EventArgs e)
+        private void BackupFilePathToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
@@ -6159,11 +6145,11 @@ namespace Leitner_Three
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
         }
 
-        private void restoreLessonToolStripMenuItem_Click(object sender, EventArgs e)
+        private void RestoreLessonToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
@@ -6250,20 +6236,20 @@ namespace Leitner_Three
                 }
 
                 UpdateSQLSettings();
-                tabPageStatistics_Enter();
-                loadXML();
+                TabPageStatistics_Enter();
+                LoadXML();
 
-                successful("Restore", "Your lesson has been restored from: " + Variables.XmlFileName);
+                Successful("Restore", "Your lesson has been restored from: " + Variables.XmlFileName);
             }
             catch (Exception ex)
             {
                 StackFrame file_info = new StackFrame(true);
-                error(ref file_info, ex.Message);
+                Error(ref file_info, ex.Message);
             }
 
         }
 
-        private void randomizeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void RandomizeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(Variables.LessonName))
             {
@@ -6340,10 +6326,10 @@ namespace Leitner_Three
                 Variables.LessonDataContext.SubmitChanges();
             }
 
-            addNodesToTreeView();
+            AddNodesToTreeView();
         }
 
-        private void updateFEIToolStripMenuItem_Click(object sender, EventArgs e)
+        private void UpdateFEIToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (FullFarEastDataContext FullFarEast = new FullFarEastDataContext(Properties.Settings.Default.ChineseStudyConnection))
             {
@@ -6373,7 +6359,7 @@ namespace Leitner_Three
             }
         }
 
-        private void archiveBacklogToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ArchiveBacklogToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TrimOnePart(0);
             TrimOnePart(2);
@@ -6381,7 +6367,7 @@ namespace Leitner_Three
             TrimOnePart(9);
             TrimOnePart(17);
 
-            tabPageStatistics_Enter();
+            TabPageStatistics_Enter();
         }
 
         private void TrimOnePart(int partNo)
@@ -6435,12 +6421,12 @@ namespace Leitner_Three
             }
         }
 
-        private void resetGoodBadCountsOnRenumberToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ResetGoodBadCountsOnRenumberToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Reset_GB_Counts = true;
         }
 
-        private void preserveGoodBadCountsOnRenumberToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PreserveGoodBadCountsOnRenumberToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Reset_GB_Counts = false;
         }
