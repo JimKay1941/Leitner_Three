@@ -13,7 +13,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ApplicationIcon>icon.ico</ApplicationIcon>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
     <ManifestCertificateThumbprint>9B9E451BABF7851F9461320655786E9B60569EB6</ManifestCertificateThumbprint>
     <SignAssembly>false</SignAssembly>
     <TargetZone>LocalIntranet</TargetZone>

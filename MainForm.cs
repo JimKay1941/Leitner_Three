@@ -336,6 +336,35 @@ namespace Leitner_Three
                     error(ref file_info, ex.Message);
                 }
             }
+            // NOTE: F5 should be reserved for debugging
+            else if ((e.KeyCode == Keys.F6) && (textBoxQuestion.Text == ""))
+            {
+                labelAnswerToQuestionMessage.Text = @"There is no Question image to display!";
+                return;
+            }
+            else if ((e.KeyCode == Keys.F6) && (textBoxQuestion.Text != ""))
+            {
+                labelAnswerToQuestionMessage.Text = @"";
+                ProcessStartInfo psi = new ProcessStartInfo();
+                psi.FileName = "H:\\OneDrive\\Visual Studio\\Composite Program Collection\\quickview\\QuickView\\bin\\Release\\QuickView.exe";
+                psi.WorkingDirectory = Environment.CurrentDirectory;
+                psi.Arguments = textBoxQuestion.Text;
+                Process proc = Process.Start(psi);
+            }
+            else if ((e.KeyCode == Keys.F7) && (textBoxAnswer.Text == ""))
+            {
+                labelAnswerToQuestionMessage.Text = @"There is no Answer image to display!";
+                return;
+            }
+            else if ((e.KeyCode == Keys.F7) && (textBoxAnswer.Text != ""))
+            {
+                labelAnswerToQuestionMessage.Text = @"";
+                ProcessStartInfo psi = new ProcessStartInfo();
+                psi.FileName = "H:\\OneDrive\\Visual Studio\\Composite Program Collection\\quickview\\QuickView\\bin\\Release\\QuickView.exe";
+                psi.WorkingDirectory = Environment.CurrentDirectory;
+                psi.Arguments = textBoxAnswer.Text;
+                Process proc = Process.Start(psi);
+            }
             else if ((e.KeyCode == Keys.F12) && (Variables.LessonTableName != ""))
             {
                 // Archive Everything under the current Study Mode
