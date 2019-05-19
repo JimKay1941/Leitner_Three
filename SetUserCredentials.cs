@@ -14,17 +14,17 @@ namespace Leitner_Three
 
         private void SetUserCredentials_Load(object sender, EventArgs e)
         {
-            textChineseStudyServer.Text = Properties.Settings.Default.ChineseStudyServer;
-			textChineseStudyPassword1.Text = Properties.Settings.Default.ChineseStudyPassword;
-			textChineseStudyPassword2.Text = Properties.Settings.Default.ChineseStudyPassword;
-            textChineseStudyUserID.Text = Properties.Settings.Default.ChineseStudyUserID;
-            textChineseStudyDatabase.Text = Properties.Settings.Default.ChineseStudyDatabase;
+            textChineseStudyServer.Text = Settings.Default.ChineseStudyServer;
+			textChineseStudyPassword1.Text = Settings.Default.ChineseStudyPassword;
+			textChineseStudyPassword2.Text = Settings.Default.ChineseStudyPassword;
+            textChineseStudyUserID.Text = Settings.Default.ChineseStudyUserID;
+            textChineseStudyDatabase.Text = Settings.Default.ChineseStudyDatabase;
 
-            textLessonDatabaseServer.Text = Properties.Settings.Default.LessonDatabaseServer;
-            textLessonDatabasePassword1.Text = Properties.Settings.Default.LessonPassword;
-            textLessonDatabasePassword2.Text = Properties.Settings.Default.LessonPassword;
-            textLessonDatabaseUserID.Text = Properties.Settings.Default.LessonDatabaseUserID;
-            textLessonDatabase.Text = Properties.Settings.Default.LessonDatabase;
+            textLessonDatabaseServer.Text = Settings.Default.LessonDatabaseServer;
+            textLessonDatabasePassword1.Text = Settings.Default.LessonPassword;
+            textLessonDatabasePassword2.Text = Settings.Default.LessonPassword;
+            textLessonDatabaseUserID.Text = Settings.Default.LessonDatabaseUserID;
+            textLessonDatabase.Text = Settings.Default.LessonDatabase;
 
         }
 
@@ -50,26 +50,26 @@ namespace Leitner_Three
 
             if (textChineseStudyPassword1.Text != "")
             {
-                Properties.Settings.Default.ChineseStudyPassword = textChineseStudyPassword1.Text;    
+                Settings.Default.ChineseStudyPassword = textChineseStudyPassword1.Text;    
             }
 
             if (textLessonDatabasePassword1.Text != "")
             {
-                Properties.Settings.Default.LessonPassword = textLessonDatabasePassword1.Text;
+                Settings.Default.LessonPassword = textLessonDatabasePassword1.Text;
             }
             
             
-            Properties.Settings.Default.ChineseStudyServer = textChineseStudyServer.Text;
-            Properties.Settings.Default.ChineseStudyPassword = textChineseStudyPassword2.Text;
-            Properties.Settings.Default.ChineseStudyUserID = textChineseStudyUserID.Text;
-            Properties.Settings.Default.ChineseStudyDatabase = textChineseStudyDatabase.Text;
+            Settings.Default.ChineseStudyServer = textChineseStudyServer.Text;
+            Settings.Default.ChineseStudyPassword = textChineseStudyPassword2.Text;
+            Settings.Default.ChineseStudyUserID = textChineseStudyUserID.Text;
+            Settings.Default.ChineseStudyDatabase = textChineseStudyDatabase.Text;
 
-            Properties.Settings.Default.LessonDatabaseServer = textLessonDatabaseServer.Text;
-            Properties.Settings.Default.LessonPassword = textLessonDatabasePassword1.Text;
-            Properties.Settings.Default.LessonDatabaseUserID = textLessonDatabaseUserID.Text;
-            Properties.Settings.Default.LessonDatabase = textLessonDatabase.Text;
+            Settings.Default.LessonDatabaseServer = textLessonDatabaseServer.Text;
+            Settings.Default.LessonPassword = textLessonDatabasePassword1.Text;
+            Settings.Default.LessonDatabaseUserID = textLessonDatabaseUserID.Text;
+            Settings.Default.LessonDatabase = textLessonDatabase.Text;
 
-            Properties.Settings.Default.Save();
+            Settings.Default.Save();
 
             if (!checkUseLessonIntegratedSecurity.Checked)
             {
@@ -87,8 +87,8 @@ namespace Leitner_Three
             {
                 //JKAYWINDOWS\SQLEXPRESS;Initial Catalog=JimKay;Integrated Security=True
                 Settings.Default.LessonConnectionString =
-                    "Data Source=" + Properties.Settings.Default.LessonDatabaseServer +
-                    ";Initial Catalog=" + Properties.Settings.Default.LessonDatabase +
+                    "Data Source=" + Settings.Default.LessonDatabaseServer +
+                    ";Initial Catalog=" + Settings.Default.LessonDatabase +
                     ";Integrated Security=True";
                 string looker3 = Settings.Default.LessonConnectionString;
                 string looker4 = Settings.Default.LessonConnectionString;
@@ -96,21 +96,21 @@ namespace Leitner_Three
 
             if (!checkUseChineseStudyIntegratedSecurity.Checked)
             {
-                Properties.Settings.Default.ChineseStudyConnection =
-                    Properties.Settings.Default.ChineseStudyConnectionString;
+                Settings.Default.ChineseStudyConnection =
+                    Settings.Default.ChineseStudyConnectionString;
             }
 			else
 	{
-                Properties.Settings.Default.ChineseStudyConnection =
-                     "Data Source=" + Properties.Settings.Default.ChineseStudyServer +
-                    ";Initial Catalog=" + Properties.Settings.Default.ChineseStudyDatabase +
-                    ";Persist Security Info=True;User ID=" + Properties.Settings.Default.ChineseStudyUserID +
-                    ";Password=" + Properties.Settings.Default.ChineseStudyPassword;
+                Settings.Default.ChineseStudyConnection =
+                     "Data Source=" + Settings.Default.ChineseStudyServer +
+                    ";Initial Catalog=" + Settings.Default.ChineseStudyDatabase +
+                    ";Persist Security Info=True;User ID=" + Settings.Default.ChineseStudyUserID +
+                    ";Password=" + Settings.Default.ChineseStudyPassword;
                 string looker5 = Settings.Default.ChineseStudyConnection;
                 string looker6 = Settings.Default.ChineseStudyConnection; 
             }
 
-            Properties.Settings.Default.Save();
+            Settings.Default.Save();
 
 			Close();
         }

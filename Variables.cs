@@ -26,7 +26,7 @@ namespace Leitner_Three
         public static string FirstRead;
         public static string LastStartTime = null;
         public static string TranslatorLine;
-        public static string UsersFolder = Application.StartupPath + "\\users\\";
+        public static string UsersFolder = $"{Application.StartupPath}\\users\\";
         public static readonly string[] RadioButtonText = new string[7];
     }
 }

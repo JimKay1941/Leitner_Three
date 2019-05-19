@@ -13,36 +13,34 @@ namespace Leitner_Three
 
         private void button1_Enter(object sender, EventArgs e)
         {
-            if (textBoxSide1Name.Text == "")
-            {
-                textBoxSide1Name.Text = Variables.Leitner.Setting[0].Side1Name;
-                textBoxSide2Name.Text = Variables.Leitner.Setting[0].Side2Name;
-                textBoxSide3Name.Text = Variables.Leitner.Setting[0].Side3Name;
-                textBoxStudySequence.Text = Variables.Leitner.Setting[0].StudySequence;
-            }
+            if (textBoxSide1Name.Text != "") return;
+            textBoxSide1Name.Text = Variables.Leitner.Setting[0].Side1Name;
+            textBoxSide2Name.Text = Variables.Leitner.Setting[0].Side2Name;
+            textBoxSide3Name.Text = Variables.Leitner.Setting[0].Side3Name;
+            textBoxStudySequence.Text = Variables.Leitner.Setting[0].StudySequence;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBoxSide1Name.Text.Length < 1)
             {
-                MessageBox.Show("The name for Side1 must contain at least one character", "Side1 Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(@"The name for Side1 must contain at least one character", "Side1 Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxSide1Name.Text = Variables.Leitner.Setting[0].Side1Name;
             }
             else if (textBoxSide2Name.Text.Length < 1)
             {
-                MessageBox.Show("The name for Side2 must contain at least one character", "Side2 Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(@"The name for Side2 must contain at least one character", "Side2 Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxSide2Name.Text = Variables.Leitner.Setting[0].Side2Name;
             }
             else if (textBoxSide3Name.Text.Length < 1)
             {
-                MessageBox.Show("The name for Side3 must contain at least one character", "Side3 Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(@"The name for Side3 must contain at least one character", "Side3 Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxSide3Name.Text = Variables.Leitner.Setting[0].Side3Name;
             }
 
             else if (textBoxStudySequence.Text.Length != 6)
             {
-                MessageBox.Show("The StudySequence must contain six numeric digits, each in the range of 1-6", "StudySequence", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(@"The StudySequence must contain six numeric digits, each in the range of 1-6", "StudySequence", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxStudySequence.Text = Variables.Leitner.Setting[0].StudySequence;
                 int start = 0;
                 ValidateOneDigit(start);

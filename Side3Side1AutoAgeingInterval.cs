@@ -26,9 +26,9 @@ namespace Leitner_Three
 					var settings = from s in Variables.SettingDataContext.Setting01s
 								   select s;
 
-					foreach (var n01set in settings)
+					foreach (var n01Set in settings)
 					{
-						n01set.C_A_AutoAgeInterval = Convert.ToInt32(C_A_AutoAgeingInterval.Text);
+						n01Set.C_A_AutoAgeInterval = Convert.ToInt32(C_A_AutoAgeingInterval.Text);
 					}
 
 					Variables.SettingDataContext.SubmitChanges();

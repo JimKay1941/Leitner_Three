@@ -7,14 +7,12 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Linq;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Security.AccessControl;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -25,7 +23,7 @@ namespace Leitner_Three
     {
         //#region Fields
 
-        LeitnerBox.ToLearnRow _selectedItem;
+        private LeitnerBox.ToLearnRow _selectedItem;
 
         //#endregion Fields
 

@@ -15,60 +15,58 @@ namespace Leitner_Three
 
         private void ListOfLessons()
         {
-            if (Properties.Settings.Default.LessonConnectionString != "")
+            if (Properties.Settings.Default.LessonConnectionString == "") return;
+            Variables.LessonName = null;
+            Variables.LessonTableName = null;
+            Variables.LessonTableNumber = null;
+            Variables.LessonDataContext = null;
+            Variables.SettingDataContext = null;
+
+            var looker20 = Properties.Settings.Default.LessonConnectionString;
+
+            using (Variables.TabOfContDataContext = new LeitnerLessonsDataContext(Properties.Settings.Default.LessonConnectionString))
             {
-				Variables.LessonName = null;
-				Variables.LessonTableName = null;
-				Variables.LessonTableNumber = null;
-				Variables.LessonDataContext = null;
-				Variables.SettingDataContext = null;
+                var ntocs = from n1 in Variables.TabOfContDataContext.TabOfConts
+                    orderby n1.Lesson_Name
+                    select n1;
 
-                string looker20 = Properties.Settings.Default.LessonConnectionString;
-
-				using (Variables.TabOfContDataContext = new LeitnerLessonsDataContext(Properties.Settings.Default.LessonConnectionString))
-				{
-					var ntocs = from n1 in Variables.TabOfContDataContext.TabOfConts
-                                orderby n1.Lesson_Name
-								select n1;
-
-					foreach (var ntoc in ntocs)
-					{
-						//Variables.LessonName = ntoc.Lesson_Name;
-						//Variables.LessonTableName = ntoc.Table_Name;
-						//Variables.SettingTableName = "Setting" + ntoc.Table_Name.Substring(6, 2);
-						//Variables.LessonTableNumber = ntoc.Id.ToString();
-						if ((ntoc.Lesson_Name != null) && (ntoc.Lesson_Name != ""))
-						{
-							if (Properties.Settings.Default.user_section.Length == 0)
-							{
-								listBox1.Items.Add(ntoc.Lesson_Name);
-								continue;
-							}
-							else
-							{
-								if (ntoc.Lesson_Name.Length <= Properties.Settings.Default.user_section.Length)
-								{
-									if (ntoc.Lesson_Name == Properties.Settings.Default.user_section.Substring(0, ntoc.Lesson_Name.Length))
-									{
-										listBox1.Items.Add(ntoc.Lesson_Name);
-										continue;
-									}
-								}
-								else
-								{
-									if (Properties.Settings.Default.user_section == ntoc.Lesson_Name.Substring(0, Properties.Settings.Default.user_section.Length))
-									{
-										listBox1.Items.Add(ntoc.Lesson_Name);
-										continue;
-									}
-								}
-							}
-						}
-					}
-				}
-				Variables.LessonTableName = "";
-			}
-		}
+                foreach (var ntoc in ntocs)
+                {
+                    //Variables.LessonName = ntoc.Lesson_Name;
+                    //Variables.LessonTableName = ntoc.Table_Name;
+                    //Variables.SettingTableName = "Setting" + ntoc.Table_Name.Substring(6, 2);
+                    //Variables.LessonTableNumber = ntoc.Id.ToString();
+                    if ((ntoc.Lesson_Name != null) && (ntoc.Lesson_Name != ""))
+                    {
+                        if (Properties.Settings.Default.user_section.Length == 0)
+                        {
+                            listBox1.Items.Add(ntoc.Lesson_Name);
+                            continue;
+                        }
+                        else
+                        {
+                            if (ntoc.Lesson_Name.Length <= Properties.Settings.Default.user_section.Length)
+                            {
+                                if (ntoc.Lesson_Name == Properties.Settings.Default.user_section.Substring(0, ntoc.Lesson_Name.Length))
+                                {
+                                    listBox1.Items.Add(ntoc.Lesson_Name);
+                                    continue;
+                                }
+                            }
+                            else
+                            {
+                                if (Properties.Settings.Default.user_section == ntoc.Lesson_Name.Substring(0, Properties.Settings.Default.user_section.Length))
+                                {
+                                    listBox1.Items.Add(ntoc.Lesson_Name);
+                                    continue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            Variables.LessonTableName = "";
+        }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {

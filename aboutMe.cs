@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace Leitner_Three
 {
@@ -20,7 +21,7 @@ namespace Leitner_Three
             {
                 System.Diagnostics.Process.Start(e.Link.LinkData.ToString());
             }
-            catch
+            catch (Exception)
             {
             }
         }

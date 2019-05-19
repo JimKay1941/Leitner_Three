@@ -19,9 +19,9 @@ namespace Leitner_Three
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-			string addIt = "\\";
+			var addIt = "\\";
 
-			if ((textUserPath.Text.Length >= 1) && (textUserPath.Text.Substring(textUserPath.Text.Length - 1, 1) == "\\"))
+			if (textUserPath.Text.Length >= 1 && textUserPath.Text.Substring(textUserPath.Text.Length - 1, 1) == "\\")
 				addIt = "";
 
             Properties.Settings.Default.user_path = textUserPath.Text + addIt;

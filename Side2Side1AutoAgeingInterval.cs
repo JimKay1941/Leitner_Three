@@ -24,7 +24,7 @@ namespace Leitner_Three
                     Variables.SettingDataContext =
                     LeitnerLessonsDataContext.GetSettingContext(Variables.SettingTableName))
                 {
-                    IQueryable<Setting01> settings = from s in Variables.SettingDataContext.Setting01s
+                    var settings = from s in Variables.SettingDataContext.Setting01s
                                                      select s;
 
                     foreach (Setting01 n01Set in settings)
