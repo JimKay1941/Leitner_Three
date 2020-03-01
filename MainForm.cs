@@ -342,7 +342,7 @@ namespace Leitner_Three
                 labelAnswerToQuestionMessage.Text = @"";
                 ProcessStartInfo psi = new ProcessStartInfo
                 {
-                    FileName = "H:\\OneDrive\\Visual Studio\\Composite Program Collection\\quickview\\QuickView\\bin\\Release\\QuickView.exe",
+                    FileName = @"H:\OneDrive-european_personality@live.com\OneDrive\Visual Studio\Composite Program Collection\quickview\QuickView\bin\Release\QuickView.exe",
                     WorkingDirectory = Environment.CurrentDirectory,
                     Arguments = textBoxQuestion.Text
                 };
@@ -358,7 +358,7 @@ namespace Leitner_Three
                 labelAnswerToQuestionMessage.Text = @"";
                 ProcessStartInfo psi = new ProcessStartInfo
                 {
-                    FileName = "H:\\OneDrive\\Visual Studio\\Composite Program Collection\\quickview\\QuickView\\bin\\Release\\QuickView.exe",
+                    FileName = @"H:\OneDrive-european_personality@live.com\OneDrive\Visual Studio\Composite Program Collection\quickview\QuickView\bin\Release\QuickView.exe",
                     WorkingDirectory = Environment.CurrentDirectory,
                     Arguments = textBoxAnswer.Text
                 };
